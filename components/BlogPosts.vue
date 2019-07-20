@@ -4,7 +4,7 @@
     <div v-for="blogItem in blogItems" :key="blogItem.id">
       <div v-for="item in blogItem" :key="item.id">
         <nuxt-link :key="item.id" :to="`blog/${item.id}`">
-        {{ item.title }} - {{ item.date }}
+          {{ item.title }} - {{ item.date }}
         </nuxt-link>
       </div>
     </div>

@@ -1,7 +1,10 @@
 <template>
   <section class="music">
-    <a :href="song.url">{{ song.artist }} - {{ song.title }}</a>
-    <span>{{ song.songTime }}</span>
+    <div v-if="!isEmpty">
+      <span v-if="nowPlaying">icon for playing</span>
+      <a :href="song.url">{{ song.artist }} {{ song.title }}</a>
+      <span>{{ song.songTime }}</span>
+    </div>
   </section>
 </template>
 
@@ -10,6 +13,8 @@ export default {
   name: 'Music',
   data: () => {
     return {
+      isEmpty: true, // avoid FOUC
+      nowPlaying: false,
       song: {
         artist: {
           type: String,
@@ -42,11 +47,16 @@ export default {
         this.song.url = currentTrack.url;
         this.song.songTime =
           typeof currentTrack.date === 'undefined'
-            ? 'now playing'
+            ? this.playingLive()
             : this.calculateDate(new Date().getTime() / 1000 - currentTrack.date.uts);
+        this.isEmpty = false;
       } catch (error) {
-        console.log(error);
+        // swallow error
       }
+    },
+    playingLive() {
+      this.nowPlaying = true;
+      return 'now playing';
     },
     calculateDate(secAgo) {
       let agoString, agoRange, agoScaled;
@@ -57,7 +67,7 @@ export default {
       } else if (secAgo >= (agoRange = 60)) {
         agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`
       } else if (secAgo >= -60) {
-        agoString = 'listening just now';
+        agoString = 'listened just now';
       } else {
         agoString = 'soon'; // if this happens..something is very wrong
       }
@@ -70,5 +80,9 @@ export default {
 <style lang="scss" scoped>
 .music {
   grid-area: music;
+  height: 100px;
+}
+.songTime {
+  font-style: italic;
 }
 </style>
