@@ -40,7 +40,7 @@ export default {
   grid-template-rows: auto;
   grid-template-areas:
     "intro intro intro intro"
-    "music . . ."
+    "music music music ."
     "blogposts contact other .";
 }
 </style>
