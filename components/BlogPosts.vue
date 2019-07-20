@@ -1,9 +1,11 @@
 <template>
   <section class="blogposts">
     Blogposts
-    <div v-for="blog in blogs" :key="blog.id">
-      <div v-for="item in blog" :key="item.id">
-        {{ item.title }}
+    <div v-for="blogItem in blogItems" :key="blogItem.id">
+      <div v-for="item in blogItem" :key="item.id">
+        <nuxt-link :key="item.id" :to="`blog/${item.id}`">
+        {{ item.title }} - {{ item.date }}
+        </nuxt-link>
       </div>
     </div>
   </section>
@@ -15,7 +17,7 @@ import blogPosts from '~/contents/blogposts.js/'
 export default {
   data: () => {
     return {
-      blogs: []
+      blogItems: []
     };
   },
   mounted() {
@@ -25,8 +27,7 @@ export default {
     async getBlogPosts() {
       return Promise.all(blogPosts.map(blog => this.mapOverBlogs(blog)))
         .then((response) => {
-          console.log(typeof response);
-          return this.blogs.push(response);
+          return this.blogItems.push(response);
         })
     },
     async mapOverBlogs(name) {

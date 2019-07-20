@@ -1,7 +1,7 @@
 ---
 name: 'another-test'
 title: Another test
-year: 28 May 2019
+date: 28 May 2019
 id: 'another-test'
 description: |
   Bacon ipsum dolor amet spare ribs ham t-bone buffalo prosciutto, frankfurter bresaola short ribs cupim ground round filet mignon shoulder pork chuck strip steak.

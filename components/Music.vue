@@ -8,17 +8,20 @@
 <script>
 export default {
   name: 'Music',
-  data: function () {
+  data: () => {
     return {
       song: {
         artist: {
-          type: String
+          type: String,
+          required: true,
         },
         title: {
           type: String,
+          required: true,
         },
         url: {
           type: String,
+          required: true,
         },
         songTime: {
           type: String,
@@ -30,21 +33,6 @@ export default {
     this.fetchSongInformation();
   },
   methods: {
-    calculateDate(secAgo) {
-      let agoString, agoRange, agoScaled;
-      if (secAgo >= (agoRange = 60 * 60 * 24)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`
-      } else if (secAgo >= (agoRange = 60 * 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`
-      } else if (secAgo >= (agoRange = 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`
-      } else if (secAgo >= -60) {
-        agoString = 'listening just now';
-      } else {
-        agoString = 'soon'; // if this happens..something is very wrong
-      }
-      return agoString;
-    },
     async fetchSongInformation() {
       try {
         const data = await this.$axios.$get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=shinyhats&api_key=54f8f15133336606e882fdf20148d123&limit=2&extended=1&format=json');
@@ -59,6 +47,21 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    calculateDate(secAgo) {
+      let agoString, agoRange, agoScaled;
+      if (secAgo >= (agoRange = 60 * 60 * 24)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`
+      } else if (secAgo >= (agoRange = 60 * 60)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`
+      } else if (secAgo >= (agoRange = 60)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`
+      } else if (secAgo >= -60) {
+        agoString = 'listening just now';
+      } else {
+        agoString = 'soon'; // if this happens..something is very wrong
+      }
+      return agoString;
     },
   },
 }
