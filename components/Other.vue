@@ -1,6 +1,10 @@
 <template>
   <section class="other">
-    Other
+    <h1>Other</h1>
+    <ul>
+      <li>Humans.txt</li>
+      <li>what.pm</li>
+    </ul>
   </section>
 </template>
 

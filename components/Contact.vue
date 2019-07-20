@@ -1,6 +1,10 @@
 <template>
   <section class="contact">
-    Contact
+    <h1>Get in touch</h1>
+    <ul>
+      <li>Twitter</li>
+      <li>GitHub</li>
+    </ul>
   </section>
 </template>
 

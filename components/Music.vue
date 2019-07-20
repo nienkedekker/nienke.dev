@@ -1,10 +1,10 @@
 <template>
   <section class="music">
-    <div v-if="!isEmpty">
+    <p v-if="!isEmpty">
       <span v-if="nowPlaying">icon for playing</span>
-      <a :href="song.url">{{ song.artist }} {{ song.title }}</a>
-      <span>{{ song.songTime }}</span>
-    </div>
+      <a :href="song.url">{{ song.artist }} - {{ song.title }}</a>
+      <span class="songTime">{{ song.songTime }}</span>
+    </p>
   </section>
 </template>
 
@@ -80,7 +80,7 @@ export default {
 <style lang="scss" scoped>
 .music {
   grid-area: music;
-  height: 100px;
+  min-height: 50px;
 }
 .songTime {
   font-style: italic;
