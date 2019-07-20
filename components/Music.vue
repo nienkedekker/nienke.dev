@@ -1,7 +1,7 @@
 <template>
   <section class="music">
     <a :href="music.url">{{ music.artist }} - {{ music.title }}</a>
-    <span v-if="music.nowPlaying">now playing!</span>
+    <span v-if="music.nowPlaying === 'true'">now playing!</span>
   </section>
 </template>
 
@@ -21,7 +21,7 @@ export default {
           type: String,
         },
         nowPlaying: {
-          type: Boolean,
+          type: String,
         }
       }
     }
