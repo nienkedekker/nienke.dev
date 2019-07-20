@@ -3,6 +3,7 @@ Single blog post
 <template>
   <div>
     <h1>{{ title }}</h1>
+    <p>{{ date }}</p>
     <span v-html="html" />
   </div>
 </template>
@@ -21,10 +22,17 @@ export default {
       body: fileContent.body,
       html: fileContent.html
     }
-  }
+  },
+  head() {
+    return {
+      title: this.title,
+    };
+  },
 }
 </script>
 
 <style lang="scss">
-
+img {
+  width: 50%;
+}
 </style>

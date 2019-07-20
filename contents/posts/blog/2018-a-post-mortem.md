@@ -22,6 +22,9 @@ It's been over a year since I wrote 2017: A Post Mortem, and a lot has happened!
 * I didn't contribute to any open source projects, even though that was my goal last year.
 * I didn't write more blog posts (another goal from last year).
 
+![](/talk.jpeg)
+_Sketch notes for the talk I gave at role=drinks, made by  [Stephanie](https://stephanie.lol/)!_
+
 # On quitting a job less than six months in
 In December 2017 I started a new job at a design agency. It's a great company and I had amazing co-workers, but after a few months I had to admit to myself that A) I did not like interacting with clients and B) I couldn't care less about the product I worked on. In order to enjoy my job, I need to work on something that I'd personally use. At the agency, I was working on a website for dairy farmers to keep track of the quality of their milk..so that wasn't ideal. The work itself was interesting: I learned a lot about ES6 and advanced Sass (and even some C#!), but the idea I was spending 40 hours a week working on a thing me or anyone I know would never use was pretty depressing. It felt like my work didn't matter.
 
@@ -41,3 +44,29 @@ So I switched jobs and now I work on a website that I personally use as well, an
 	* [Summer of Haze - P A C I F I C A](https://www.discogs.com/Summer-Of-Haze-P-A-C-I-F-I-C-A/release/12573439/)
 
 I have some goals for 2019, and they're largely the same as last year's: write good code and try to give back by open sourcing projects or contributing to existing open source projects. Maybe learn some React ୧(•̀ᴗ•́๑)ᵒᵏᵎᵎᵎᵎ
+
+# Some photos
+
+![](/portugal.jpeg)
+_Portugal, September/October_
+
+![](/fronteers.jpeg) 
+_Fronteers, October_
+
+![](/romania.jpeg) 
+_Romania, April_
+
+![](/glasgow.jpeg)
+_Glasgow, May_
+
+![](/whw.jpeg) 
+_WHW, May_
+
+![](/lochness.jpeg) 
+_Loch Ness, May_
+
+![](/whw2.jpeg) 
+_WHW, May_
+
+![](/nienkemeem.jpeg)
+_It me_
