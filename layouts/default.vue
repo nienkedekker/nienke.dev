@@ -42,11 +42,11 @@ export default {
 <style lang="scss">
 @import '../assets/variables.scss';
 body, html {
-  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica,
-  Arial, sans-serif;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
 
   .light {
     background-color: $light_bg-color;

@@ -3,13 +3,13 @@ List of blogs on the /blog page
 <template>
   <section class="blog">
     <h1>Blog</h1>
-    <div v-for="blogItem in blogItems" :key="blogItem.id">
-      <div v-for="item in blogItem" :key="item.id">
+    <ul v-for="blogItem in blogItems" :key="blogItem.id">
+      <li v-for="item in blogItem" :key="item.id">
         <nuxt-link :key="item.id" :to="`blog/${item.id}`">
           {{ item.title }} - {{ item.date }} - {{ item.description }}
         </nuxt-link>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 </template>
 v
