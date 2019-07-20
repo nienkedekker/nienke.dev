@@ -14,5 +14,8 @@ module.exports = {
   rules: {
     'semi': 0,
     'comma-dangle': 0,
+    'no-console': 0,
+    'require-await': 0,
+    'no-extra-parens': 0,
   }
 };

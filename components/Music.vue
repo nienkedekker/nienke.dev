@@ -1,7 +1,7 @@
 <template>
   <section class="music">
-    <a :href="music.url">{{ music.artist }} - {{ music.title }}</a>
-    <span v-if="music.nowPlaying === 'true'">now playing!</span>
+    <a :href="song.url">{{ song.artist }} - {{ song.title }}</a>
+    <span>{{ song.songTime }}</span>
   </section>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'Music',
   data: function () {
     return {
-      music: {
+      song: {
         artist: {
           type: String
         },
@@ -20,25 +20,47 @@ export default {
         url: {
           type: String,
         },
-        nowPlaying: {
+        songTime: {
           type: String,
         }
       }
     }
   },
   mounted() {
-    this.fetchMusicInformation();
+    this.fetchSongInformation();
   },
   methods: {
-    async fetchMusicInformation() {
-      const data = await this.$axios.$get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=shinyhats&api_key=54f8f15133336606e882fdf20148d123&limit=2&extended=1&format=json');
-      const currentTrack = data.recenttracks.track[0];
-      this.music.artist = currentTrack.artist.name;
-      this.music.title = currentTrack.name;
-      this.music.url = currentTrack.url;
-      this.music.nowPlaying = currentTrack['@attr'].nowplaying;
-    }
-  }
+    calculateDate(secAgo) {
+      let agoString, agoRange, agoScaled;
+      if (secAgo >= (agoRange = 60 * 60 * 24)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`
+      } else if (secAgo >= (agoRange = 60 * 60)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`
+      } else if (secAgo >= (agoRange = 60)) {
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`
+      } else if (secAgo >= -60) {
+        agoString = 'listening just now';
+      } else {
+        agoString = 'soon'; // if this happens..something is very wrong
+      }
+      return agoString;
+    },
+    async fetchSongInformation() {
+      try {
+        const data = await this.$axios.$get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=shinyhats&api_key=54f8f15133336606e882fdf20148d123&limit=2&extended=1&format=json');
+        const currentTrack = data.recenttracks.track[0];
+        this.song.artist = currentTrack.artist.name;
+        this.song.title = currentTrack.name;
+        this.song.url = currentTrack.url;
+        this.song.songTime =
+          typeof currentTrack.date === 'undefined'
+            ? 'now playing'
+            : this.calculateDate(new Date().getTime() / 1000 - currentTrack.date.uts);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
 }
 </script>
 
