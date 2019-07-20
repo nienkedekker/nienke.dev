@@ -2,8 +2,12 @@
   <div class="index">
     <div class="wrapper">
       <Intro />
-      <Music />
-      <BlogPosts />
+      <no-ssr placeholder="Loading..">
+        <music />
+      </no-ssr>
+      <no-ssr placeholder="Loading..">
+        <BlogPosts />
+      </no-ssr>
       <Contact />
       <Other />
     </div>
