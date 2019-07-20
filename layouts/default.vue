@@ -1,19 +1,40 @@
 <template>
-  <main :class="getTheme">
+  <main :class="theme">
+    <button @click="switchTheme">
+      🌓
+    </button>
     <nuxt />
   </main>
 </template>
 <script>
 export default {
-  props: {
-    theme: {
-      type: String,
-      default: 'dark'
+  data: () => {
+    return {
+      theme: 'dark'
     }
   },
-  computed: {
-    getTheme() {
-      return this.theme
+  mounted() {
+    this.setThemePreference()
+  },
+  methods: {
+    setThemePreference() {
+      const getThemePreference = localStorage.getItem('theme');
+      if (getThemePreference) {
+        this.theme = getThemePreference;
+      }
+    },
+    switchTheme() {
+      switch (this.theme) {
+        case 'light':
+          this.theme = 'dark';
+          localStorage.setItem('theme', 'dark');
+          break;
+        case 'dark':
+          this.theme = 'light';
+          localStorage.setItem('theme', 'light');
+          break;
+        default:
+      }
     }
   }
 }

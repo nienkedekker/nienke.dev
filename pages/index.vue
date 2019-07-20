@@ -1,15 +1,15 @@
 <template>
   <div class="index">
     <div class="wrapper">
-      <Intro />
+      <intro />
       <no-ssr placeholder="Loading..">
         <music />
       </no-ssr>
       <no-ssr placeholder="Loading..">
-        <BlogPosts />
+        <blog-posts />
       </no-ssr>
-      <Contact />
-      <Other />
+      <contact />
+      <other />
     </div>
   </div>
 </template>
@@ -43,6 +43,7 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
+    "switch . . ."
     "intro intro intro intro"
     "music music music ."
     "blogposts contact other .";

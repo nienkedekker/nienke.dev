@@ -6747,6 +6747,11 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-storage@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/nuxt-storage/-/nuxt-storage-1.2.1.tgz#a7d1360679d3e4d4cba05daa317c8019ccb7a9fb"
+  integrity sha512-CM9Zs9pOkKaepOxG39IVhP8PT4j8BNcZVcRrws4Bw/39Jv/hPTXuuoUGgMc83BON/PwZqRTcIgMpJXcxTCNmXw==
+
 nuxt@^2.0.0:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.8.1.tgz#10a307e51973fa7b55abfeb41b84c76cbdd6f2f6"
