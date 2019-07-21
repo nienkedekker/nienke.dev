@@ -1,7 +1,7 @@
 <template>
   <main :class="theme">
-    <button @click="switchTheme">
-      🌓
+    <button class="themeSwitch" @click="switchTheme">
+      🌓 <span class="themeSwitchText">switch theme</span>
     </button>
     <nuxt />
   </main>
@@ -14,10 +14,10 @@ export default {
     }
   },
   mounted() {
-    this.setThemePreference()
+    this.getThemePreference()
   },
   methods: {
-    setThemePreference() {
+    getThemePreference() {
       const getThemePreference = localStorage.getItem('theme');
       if (getThemePreference) {
         this.theme = getThemePreference;
@@ -47,6 +47,7 @@ body, html {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.25;
+  background: black;
 
   .light {
     background-color: $light_bg-color;
@@ -59,6 +60,36 @@ body, html {
   }
 }
 
+.themeSwitch {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 1.3em;
+}
+
+.themeSwitchText {
+  font-size: .8rem;
+  padding-left: 5px;
+  margin-top: 4px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: #d6d6d6;
+  background-color: #252f40;
+  padding: 3px;
+}
+
+a:hover {
+  color: white;
+  background: #0b1728;
+}
 *,
 *:before,
 *:after {

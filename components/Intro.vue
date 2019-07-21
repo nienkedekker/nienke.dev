@@ -14,4 +14,8 @@ export default {
 .intro {
   grid-area: intro;
 }
+
+p {
+  font-size: 1.8em;
+}
 </style>
