@@ -71,7 +71,7 @@ body, html {
 .themeSwitch {
   position: absolute;
   top: .5em;
-  left: .5em;
+  right: .5em;
   border: 0;
   margin: 0;
   background-color: #05131e;
@@ -108,5 +108,11 @@ a:hover {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+li, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 </style>

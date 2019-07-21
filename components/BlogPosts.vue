@@ -48,10 +48,6 @@ export default {
 <style lang="scss" scoped>
 .blogposts {
   grid-area: blogposts;
-
-  a, a:active, a:visited {
-    background-color: transparent;
-  }
 }
 
 .title {
@@ -59,14 +55,8 @@ export default {
   margin-bottom: 1em;
 }
 
-.items {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .item {
-  margin-bottom: .5em;
+  margin-bottom: 1.25em;
 }
 
 .date {

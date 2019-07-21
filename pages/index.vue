@@ -40,7 +40,7 @@ export default {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
     "intro intro intro intro intro"
