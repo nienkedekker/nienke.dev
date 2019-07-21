@@ -2,12 +2,17 @@ List of blogs with links on the homepage
 
 <template>
   <section class="blogposts">
-    <h1>Blog Posts</h1>
-    <ul v-for="blogItem in blogItems" :key="blogItem.id">
-      <li v-for="item in blogItem" :key="item.id">
+    <h1 class="title">
+      Blog Posts
+    </h1>
+    <ul v-for="blogItem in blogItems" :key="blogItem.id" class="items">
+      <li v-for="item in blogItem" :key="item.id" class="item">
         <nuxt-link :key="item.id" :to="`blog/${item.id}`">
-          {{ item.title }} - {{ item.date }} <br>
+          {{ item.title }}
         </nuxt-link>
+        <div class="date">
+          {{ item.date }}
+        </div>
       </li>
     </ul>
   </section>
@@ -43,5 +48,29 @@ export default {
 <style lang="scss" scoped>
 .blogposts {
   grid-area: blogposts;
+
+  a, a:active, a:visited {
+    background-color: transparent;
+  }
+}
+
+.title {
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: .5em;
+}
+
+.date {
+  font-size: .75em;
+  margin: .5em 0;
 }
 </style>
