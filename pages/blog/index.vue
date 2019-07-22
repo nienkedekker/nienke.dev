@@ -2,14 +2,18 @@ List of blogs on the /blog page
 
 <template>
   <section class="blog">
-    <h1>Blog</h1>
-    <ul v-for="blogItem in blogItems" :key="blogItem.id">
-      <li v-for="item in blogItem" :key="item.id">
-        <nuxt-link :key="item.id" :to="`blog/${item.id}`">
-          {{ item.title }} - {{ item.date }} - {{ item.description }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="wrapper">
+      <h1>Blog</h1>
+      <ul v-for="blogItem in blogItems" :key="blogItem.id">
+        <li v-for="item in blogItem" :key="item.id">
+          <nuxt-link :key="item.id" :to="`blog/${item.id}`">
+            <h2> {{ item.title }}</h2>
+            <p>{{ item.date }}</p>
+            <p>{{ item.description }}</p>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 v
@@ -41,7 +45,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .blogposts {
-    grid-area: blogposts;
-  }
+.blog {
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.wrapper {
+  padding: 50px 0;
+}
+
+a, a:active, a:visited {
+  border: 0;
+}
 </style>
