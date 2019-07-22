@@ -92,15 +92,11 @@ body, html {
 
 a, a:visited, a:active {
   text-decoration: none;
-  color: #d6d6d6;
-  background-color: #252f40;
   border-bottom: 1px solid #2e3a50;
   padding: 3px;
 }
 
 a:hover {
-  color: white;
-  background: #0b1728;
 }
 
 *,

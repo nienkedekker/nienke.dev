@@ -46,6 +46,7 @@ export default {
     "intro intro intro intro intro"
     "music music music . ."
     "blogposts blogposts contact other .";
-  padding: 8em 5em;
+  padding: 6em 5em;
+  grid-gap: 1em;
 }
 </style>

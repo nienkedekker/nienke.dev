@@ -4,8 +4,12 @@
       Get in touch
     </h1>
     <ul>
-      <li>Twitter</li>
-      <li>GitHub</li>
+      <li class="list-item">
+        🐦 <a href="https://twitter.com/helenasometimes">Twitter</a>
+      </li>
+      <li class="list-item">
+        🐙 <a href="https://github.com/nienkedekker">GitHub</a>
+      </li>
     </ul>
   </section>
 </template>
@@ -22,7 +26,11 @@ export default {
 }
 
 .title {
-  font-weight: normal;
+  font-weight: 300;
   margin-bottom: 1em;
+}
+
+.list-item {
+  margin: 5px 0;
 }
 </style>

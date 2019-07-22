@@ -51,7 +51,7 @@ export default {
 }
 
 .title {
-  font-weight: normal;
+  font-weight: 300;
   margin-bottom: 1em;
 }
 
