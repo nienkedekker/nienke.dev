@@ -94,7 +94,6 @@ a, a:visited, a:active {
   font-style: italic;
   margin-left: 5px;
   font-size: .75em;
-  vertical-align: text-top;
 }
 
 .svg {

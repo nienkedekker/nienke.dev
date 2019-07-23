@@ -1,1 +1,34 @@
-..
+
+
+                                     ,
+              ,-.       _,---._ __  / \
+             /  )    .-'       `./ /   \
+            (  (   ,'            `/    /|
+             \  `-"             \'\   / |
+              `.              ,  \ \ /  |
+               /`           ,'-`-----   |
+              (            ;        |   '
+              |  ,-.    ,-' HUMANS  |  /
+              |  | (   |            | /
+              )  |  \  `.___________|/
+              `--'   `--'
+
+
+
+
+--------------------------------------------------------------
+
+Site made by Nienke Dekker
+
+(A selection of) Open Source Technologies used:
+Nuxt (https://gulpjs.com/)
+Jest (https://babeljs.io/)
+Axios (http://sass-lang.com/)
+Sass (http://sass-lang.com/)
+SVGOMG (https://jakearchibald.github.io/svgomg/)
+
+Special thanks to:
+Nuxt Markdown Blog Starter repo (https://github.com/marinaaisa/nuxt-markdown-blog-starter)
+
+Icon credit:
+https://www.flaticon.com/authors/smashicons (music note icon)
