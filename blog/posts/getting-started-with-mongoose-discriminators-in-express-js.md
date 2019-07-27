@@ -15,7 +15,7 @@ So for this rewrite, I wanted to dig a little deeper in storing data and stop re
 I'm writing this post as I'm learning, and my understanding of any concepts mentioned might be wrong. If you think that's the case, do let me know 😃 
 
 ## The problem
-Imagine you're tracking which movies, books and tv shows you consume in a given year. These three things have a few things in common: they all have a title and a date of release. They also differ from eachother, however: a Book has an _author_, whereas a Movie has a _director_. A TV show has neither of these things, but it does have a _season_. So, how would you set up your Mongoose schemas? You could easily create three different schemas for each (Book, Movie and TVshow). However, you'd be repeating yourself - in every schema, you'd have the same title field and date of release field. And if you wanted to add another field that all three schemas have in common - such as whether it's a rewatch/reread ('redo') - you'd have to add that new field to three different files. 
+Imagine you're tracking which movies, books and tv shows you consume in a given year. These three things have a few things in common: they all have a title and a date of release. They also differ from each other, however: a Book has an _author_, whereas a Movie has a _director_. A TV show has neither of these things, but it does have a _season_. So, how would you set up your Mongoose schemas? You could easily create three different schemas for each (Book, Movie and TVshow). However, you'd be repeating yourself - in every schema, you'd have the same title field and date of release field. And if you wanted to add another field that all three schemas have in common - such as whether it's a rewatch/reread ('redo') - you'd have to add that new field to three different files. 
 
 What if you could extend some kind of "Base" schema, and have Movies, Books and TV Shows inherit from that one schema? I didn't know how, but luckily, a [colleague](https://peeke.nl/) suggested I look into Mongoose discriminators. Unfortunately, the documentation is a little sparse, and I couldn't find any Express.js specific tutorials/blog posts, so here's my attempt at fixing that. Hopefully, this post will help those looking to integrate Mongoose discriminators in their Express app :)
 
@@ -76,7 +76,7 @@ redo: { type: Boolean, required: false }
 
 We'd have to add it three times in three separate files 😖. So let's try something different. 
 
-We're going to create one 'master' schema called `Base`, and we're going to make `Book`, `Movie` and `Tvshow` inherit from it. This is what we want to achieve in pseudocode:
+We're going to create one 'master' schema called _Base_, and we're going to make _Book_, _Movie_ and _Tvshow_ inherit from it. This is what we want to achieve in pseudocode:
 
 ```
 Base:
@@ -97,7 +97,7 @@ TV Show:
 	season: { type: Number, required: true }
 ```
 
-So how are we going to give our child schemas (Book, Movie, Tvshow) the `Base` options? In other words, how will we extend our `Base`? Enter [discriminators](http://mongoosejs.com/docs/discriminators.html). A discriminator is a function for `model` that _returns a model whose schema is the union of the base schema and the discriminator schema._ So basically, a discriminator will allow us to specify a key, like `kind` or `itemtype`. With this key, we can store different entities (books, movies, tv shows..) in one collection, and we'll still be able to discriminate (*badum tsss*) between these entities.
+So how are we going to give our child schemas (Book, Movie, Tvshow) the _Base_ options? In other words, how will we extend our _Base_? Enter [discriminators](http://mongoosejs.com/docs/discriminators.html). A discriminator is a function for _model_ that _returns a model whose schema is the union of the base schema and the discriminator schema._ So basically, a discriminator will allow us to specify a key, like _kind_ or _itemtype_. With this key, we can store different entities (books, movies, tv shows..) in one collection, and we'll still be able to discriminate (*badum tsss*) between these entities.
 
 So let's set up our Base schema. Again, that's the structure that our other schemas will extend from.
 ```
@@ -118,7 +118,7 @@ const Base = mongoose.model('Base', new mongoose.Schema({
 module.exports = mongoose.model('Base');
 ```
 
-And then we could edit `book.js` like this:
+And then we could edit _book.js_ like this:
 
 ```
 > models/book.js
@@ -133,7 +133,7 @@ const Book = Base.discriminator('Book', new mongoose.Schema({
 module.exports = mongoose.model('Book');
 ```
 
-With `Base.discriminator()`, we're telling Mongoose that we want to get the properties of `Base`, and add another `author` property, solely for our Book schema. Let's do the same thing with `models/movie.js`:
+With _Base.discriminator()_, we're telling Mongoose that we want to get the properties of _Base_, and add another _author_ property, solely for our Book schema. Let's do the same thing with _models/movie.js_:
 
 ```
 > models/movie.js
@@ -148,7 +148,7 @@ const Movie = Base.discriminator('Movie', new mongoose.Schema({
 module.exports = mongoose.model('Movie');
 ```
 
-and `tvshow.js`:
+and _tvshow.js_:
 
 ```
 > models/tvshow.js
@@ -205,6 +205,6 @@ exports.a_bunch_of_stuff = function(req, res) {
 ```
 
 ## Wrapping up
-By using a discriminator we have four small files with DRY code, instead of three larger model files with lots of the same code 😎 now anytime I want to add a new property that is shared across schemas, I'll only have to edit `Base`. And if I want to add new models (maybe I should start keeping track of concerts I go to!), I can easily extend existing properties when needed.
+By using a discriminator we have four small files with DRY code, instead of three larger model files with lots of the same code 😎 now anytime I want to add a new property that is shared across schemas, I'll only have to edit _Base_, And if I want to add new models (maybe I should start keeping track of concerts I go to!), I can easily extend existing properties when needed.
 
 If you liked this post, please consider [sharing it](https://twitter.com/intent/tweet?text=Getting%20started%20with%20Mongoose%20discriminators%20in%20Express.js%20by%20@helenasometimes%20-%20https://nienkedekker.com/blog/getting-started-with-mongoose-discriminators-in-express-js)!
