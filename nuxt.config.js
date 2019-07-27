@@ -1,5 +1,5 @@
 import path from 'path'
-import blogposts from './contents/blogposts.js'
+import blogposts from './blog/blogposts.js'
 
 export default {
   mode: 'universal',
@@ -56,11 +56,8 @@ export default {
       config.module.rules.push({
         test: /\.md$/,
         loader: 'frontmatter-markdown-loader',
-        include: path.resolve(__dirname, 'contents'),
+        include: path.resolve(__dirname, 'blog'),
         options: {
-          vue: {
-            root: 'dynamicMarkdown'
-          }
         }
       })
     }

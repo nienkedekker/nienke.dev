@@ -33,4 +33,8 @@ export default {
 .list-item {
   margin: 5px 0;
 }
+
+a, a:link, a:visited {
+  background-color: transparent;
+}
 </style>

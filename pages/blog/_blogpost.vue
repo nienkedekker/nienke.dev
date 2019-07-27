@@ -11,7 +11,7 @@ Single blog post
 <script>
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`~/contents/posts/blog/${params.blogpost}.md`);
+    const fileContent = await import(`~/blog/posts/${params.blogpost}.md`);
     const attr = fileContent.attributes;
     return {
       name: params.blogpost,

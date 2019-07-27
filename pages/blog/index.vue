@@ -18,7 +18,7 @@ List of blogs on the /blog page
 </template>
 v
 <script>
-import blogPosts from '~/contents/blogposts.js/'
+import blogPosts from '../../blog/blogposts.js'
 
 export default {
   data: () => {
@@ -37,7 +37,7 @@ export default {
         })
     },
     async mapOverBlogs(name) {
-      const markdownContents = await import(`~/contents/posts/blog/${name}.md`);
+      const markdownContents = await import(`~/blog/posts/${name}.md`);
       return markdownContents.attributes;
     },
   }
@@ -53,9 +53,5 @@ export default {
 
 .wrapper {
   padding: 50px 0;
-}
-
-a, a:active, a:visited {
-  border: 0;
 }
 </style>

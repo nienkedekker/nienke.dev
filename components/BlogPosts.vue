@@ -19,7 +19,7 @@ List of blogs with links on the homepage
 </template>
 v
 <script>
-import blogPosts from '~/contents/blogposts.js/'
+import blogPosts from '../blog/blogposts.js'
 
 export default {
   data: () => {
@@ -38,7 +38,7 @@ export default {
         })
     },
     async mapOverBlogs(name) {
-      const markdownContents = await import(`~/contents/posts/blog/${name}.md`);
+      const markdownContents = await import(`~/blog/posts/${name}.md`);
       return markdownContents.attributes;
     },
   }
@@ -62,5 +62,9 @@ export default {
 .date {
   font-size: .75em;
   margin: .5em 0;
+}
+
+a, a:link, a:visited {
+  background-color: transparent;
 }
 </style>

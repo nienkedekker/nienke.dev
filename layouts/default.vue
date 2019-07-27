@@ -60,11 +60,31 @@ body, html {
   .light {
     background-color: $light_bg-color;
     color: $light_font-color;
+
+    a, a:visited, a:active {
+      color: $light_link-color;
+      background-color: $light_link-color-bg;
+      border-bottom: 1px solid rgba($light_link-color, 0.2);
+    }
+
+    a:hover {
+      color: $light_link-color-hover;
+    }
   }
 
   .dark {
     background-color: $dark_bg-color;
     color: $dark_font-color;
+
+    a, a:visited, a:active {
+      color: $dark_link-color;
+      background-color: $dark_link-color-bg;
+      border-bottom: 1px solid rgba($dark_link-color, 0.2);
+    }
+
+    a:hover {
+      color: $dark_link-color-hover;
+    }
   }
 }
 
@@ -90,15 +110,6 @@ body, html {
   vertical-align: text-top;
 }
 
-a, a:visited, a:active {
-  text-decoration: none;
-  border-bottom: 1px solid #2e3a50;
-  padding: 3px;
-}
-
-a:hover {
-}
-
 *,
 *:before,
 *:after {
@@ -110,5 +121,9 @@ li, ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
 }
 </style>
