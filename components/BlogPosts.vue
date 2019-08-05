@@ -1,7 +1,7 @@
 List of blogs with links on the homepage
 
 <template>
-  <section class="blogposts">
+  <section class="blogPosts">
     <h1 class="title">
       Blog Posts
     </h1>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blogposts {
+.blogPosts {
   grid-area: blogposts;
 }
 

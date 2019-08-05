@@ -1,6 +1,6 @@
 <template>
   <header>
-    About Home
+    All Posts About Twitter Github
   </header>
 </template>
 <script></script>

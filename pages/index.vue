@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="wrapper">
+    <div class="indexWrapper">
       <intro />
       <no-ssr placeholder="Loading..">
         <music />
@@ -38,7 +38,7 @@ export default {
   min-height: 100vh;
 }
 
-.wrapper {
+.indexWrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;

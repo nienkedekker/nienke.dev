@@ -3,7 +3,7 @@ Single blog post
 <template>
   <section class="blogPost">
     <blog-header />
-    <div class="wrapper">
+    <div class="blogPostWrapper">
       <h1>{{ title }}</h1>
       <p class="date">
         {{ date }}
@@ -50,7 +50,7 @@ export default {
   margin: 0 auto;
 }
 
-.wrapper {
+.blogPostWrapper {
   line-height: 1.85em;
 
   h1, h2, h3 {

@@ -3,7 +3,7 @@ List of blogs on the /blog page
 <template>
   <section class="blogIndex">
     <blog-header></blog-header>
-    <div class="wrapper">
+    <div class="blogIndexWrapper">
       <h1>Blog</h1>
       <ul v-for="blogItem in blogItems" :key="blogItem.id" class="list">
         <li v-for="item in blogItem" :key="item.id" class="listItem">
@@ -60,7 +60,7 @@ export default {
   max-width: 640px;
 }
 
-.wrapper {
+.blogIndexWrapper {
   padding: 50px 0;
   line-height: 1.85em;
 
