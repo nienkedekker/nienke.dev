@@ -1,6 +1,9 @@
 <template>
   <main :class="theme">
-    <button class="themeSwitch" @click="switchTheme">
+    <button
+      class="themeSwitch"
+      @click="switchTheme"
+    >
       {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
     </button>
     <nuxt />
@@ -8,21 +11,19 @@
 </template>
 <script>
 export default {
-  data: () => {
-    return {
-      theme: 'dark'
-    }
-  },
+  data: () => ({
+      theme: 'dark',
+    }),
   computed: {
     getCorrectEmoji() {
-      return this.theme === 'light' ? '🌒' : '🌔'
+      return this.theme === 'light' ? '🌒' : '🌔';
     },
     getButtonText() {
-      return this.theme === 'light' ? 'switch theme' : 'switch theme'
+      return this.theme === 'light' ? 'switch theme' : 'switch theme';
     },
   },
   mounted() {
-    this.getThemePreferenceFromLocalStorage()
+    this.getThemePreferenceFromLocalStorage();
   },
   methods: {
     getThemePreferenceFromLocalStorage() {
@@ -44,8 +45,8 @@ export default {
         default:
       }
     },
-  }
-}
+  },
+};
 </script>
 <style lang="scss">
 @import '../assets/variables.scss';

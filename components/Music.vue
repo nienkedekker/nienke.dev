@@ -1,7 +1,12 @@
 <template>
   <section class="music">
     <p v-if="!isEmpty">
-      <svg class="svg" :class="[nowPlaying ? 'playing' : '']" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55"><path d="M52.66.249a1.012 1.012 0 0 0-.789-.241l-31 4.011A1 1 0 0 0 20 5.01v35.613C18.174 38.428 15.273 37 12 37c-5.514 0-10 4.037-10 9s4.486 9 10 9 10-4.037 10-9c0-.232-.019-.46-.039-.687.013-.065.039-.124.039-.192V16.118l29-3.753v18.257C49.174 28.428 46.273 27 43 27c-5.514 0-10 4.037-10 9s4.486 9 10 9c5.464 0 9.913-3.966 9.993-8.867 0-.013.007-.024.007-.037V1a.998.998 0 0 0-.34-.751zM12 53c-4.411 0-8-3.141-8-7s3.589-7 8-7 8 3.141 8 7-3.589 7-8 7zm31-10c-4.411 0-8-3.141-8-7s3.589-7 8-7 8 3.141 8 7-3.589 7-8 7zM22 14.101V5.889l29-3.752V10.348l-29 3.753z" />
+      <svg
+        class="svg"
+        :class="[nowPlaying ? 'playing' : '']"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 55 55"
+      ><path d="M52.66.249a1.012 1.012 0 0 0-.789-.241l-31 4.011A1 1 0 0 0 20 5.01v35.613C18.174 38.428 15.273 37 12 37c-5.514 0-10 4.037-10 9s4.486 9 10 9 10-4.037 10-9c0-.232-.019-.46-.039-.687.013-.065.039-.124.039-.192V16.118l29-3.753v18.257C49.174 28.428 46.273 27 43 27c-5.514 0-10 4.037-10 9s4.486 9 10 9c5.464 0 9.913-3.966 9.993-8.867 0-.013.007-.024.007-.037V1a.998.998 0 0 0-.34-.751zM12 53c-4.411 0-8-3.141-8-7s3.589-7 8-7 8 3.141 8 7-3.589 7-8 7zm31-10c-4.411 0-8-3.141-8-7s3.589-7 8-7 8 3.141 8 7-3.589 7-8 7zM22 14.101V5.889l29-3.752V10.348l-29 3.753z" />
       </svg>
       <a :href="song.url">{{ song.artist }} - {{ song.title }}</a>
       <span class="songTime">{{ song.songTime }}</span>
@@ -12,8 +17,7 @@
 <script>
 export default {
   name: 'Music',
-  data: () => {
-    return {
+  data: () => ({
       isEmpty: true, // avoid FOUC
       nowPlaying: false,
       song: {
@@ -31,10 +35,9 @@ export default {
         },
         songTime: {
           type: String,
-        }
-      }
-    }
-  },
+        },
+      },
+    }),
   mounted() {
     this.fetchSongInformation();
   },
@@ -46,8 +49,7 @@ export default {
         this.song.artist = currentTrack.artist.name;
         this.song.title = currentTrack.name;
         this.song.url = currentTrack.url;
-        this.song.songTime =
-          typeof currentTrack.date === 'undefined'
+        this.song.songTime = typeof currentTrack.date === 'undefined'
             ? this.playingLive()
             : this.calculateDate(new Date().getTime() / 1000 - currentTrack.date.uts);
         this.isEmpty = false;
@@ -60,13 +62,14 @@ export default {
       return 'now playing';
     },
     calculateDate(secAgo) {
-      let agoString, agoRange, agoScaled;
+      let agoString; let agoRange; let
+agoScaled;
       if (secAgo >= (agoRange = 60 * 60 * 24)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`;
       } else if (secAgo >= (agoRange = 60 * 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`;
       } else if (secAgo >= (agoRange = 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`
+        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`;
       } else if (secAgo >= -60) {
         agoString = 'listened just now';
       } else {
@@ -75,7 +78,7 @@ export default {
       return agoString;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

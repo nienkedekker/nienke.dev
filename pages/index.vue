@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import BlogPosts from '../components/BlogPosts'
-import Contact from '../components/Contact'
-import Intro from '../components/Intro'
-import Music from '../components/Music'
-import Other from '../components/Other'
+import BlogPosts from '../components/BlogPosts';
+import Contact from '../components/Contact';
+import Intro from '../components/Intro';
+import Music from '../components/Music';
+import Other from '../components/Other';
 
 export default {
   components: {
@@ -27,9 +27,9 @@ export default {
     Contact,
     Intro,
     Music,
-    Other
+    Other,
   },
-}
+};
 </script>
 
 <style lang="scss">

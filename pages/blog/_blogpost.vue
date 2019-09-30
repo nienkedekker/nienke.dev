@@ -33,15 +33,15 @@ export default {
       id: attr.id,
       description: attr.description,
       body: fileContent.body,
-      html: fileContent.html
-    }
+      html: fileContent.html,
+    };
   },
   head() {
     return {
       title: this.title,
     };
   },
-}
+};
 </script>
 
 <style lang="scss">

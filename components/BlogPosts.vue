@@ -5,9 +5,20 @@ List of blogs with links on the homepage
     <h1 class="title">
       Blog Posts
     </h1>
-    <ul v-for="blogItem in blogItems" :key="blogItem.id" class="items">
-      <li v-for="item in blogItem" :key="item.id" class="item">
-        <nuxt-link :key="item.id" :to="`blog/${item.id}`">
+    <ul
+      v-for="blogItem in blogItems"
+      :key="blogItem.id"
+      class="items"
+    >
+      <li
+        v-for="item in blogItem"
+        :key="item.id"
+        class="item"
+      >
+        <nuxt-link
+          :key="item.id"
+          :to="`blog/${item.id}`"
+        >
           {{ item.title }}
         </nuxt-link>
         <div class="date">
@@ -19,30 +30,26 @@ List of blogs with links on the homepage
 </template>
 v
 <script>
-import blogPosts from './../generatedPosts.js'
+import blogPosts from '../generatedPosts';
 
 export default {
-  data: () => {
-    return {
-      blogItems: []
-    };
-  },
+  data: () => ({
+      blogItems: [],
+    }),
   mounted() {
     this.getBlogPosts();
   },
   methods: {
     async getBlogPosts() {
-      return Promise.all(blogPosts.map(blog => this.mapOverBlogs(blog)))
-        .then((response) => {
-          return this.blogItems.push(response);
-        })
+      return Promise.all(blogPosts.map((blog) => this.mapOverBlogs(blog)))
+        .then((response) => this.blogItems.push(response));
     },
     async mapOverBlogs(name) {
       const markdownContents = await import(`~/blog/posts/${name}.md`);
       return markdownContents.attributes;
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
