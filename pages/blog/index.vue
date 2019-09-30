@@ -2,7 +2,7 @@ List of blogs on the /blog page
 
 <template>
   <section class="blogIndex">
-    <blog-header></blog-header>
+    <blog-header />
     <div class="blogIndexWrapper">
       <h1>Blog</h1>
       <ul v-for="blogItem in blogItems" :key="blogItem.id" class="list">
@@ -23,8 +23,8 @@ List of blogs on the /blog page
 </template>
 v
 <script>
-import blogPosts from '../../blog/blogposts.js'
 import BlogHeader from '../../components/blog/BlogHeader.vue';
+import blogPosts from './../../generatedPosts.js'
 
 export default {
   components: {

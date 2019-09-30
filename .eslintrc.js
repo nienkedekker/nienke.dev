@@ -18,5 +18,6 @@ module.exports = {
     'require-await': 0,
     'no-extra-parens': 0,
     'vue/no-v-html': 0,
+	  'no-tabs': 0,
   }
 };

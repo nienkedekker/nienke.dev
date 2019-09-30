@@ -3304,6 +3304,11 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+directory-tree@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.4.tgz#6d5bd7d82e48378e256a1e87b678a43c50076e2e"
+  integrity sha512-2N43msQptKbi3WMfIs+U09yi6bfyKL+MWyj5VMj8t1F/Tx04bt1cn/EEIU3o1JBltlJk7NQnzOEuTNa/KQvbWA==
+
 dlv@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
@@ -6151,6 +6156,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+markdown-extensions@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/markdown-extensions/-/markdown-extensions-1.1.1.tgz#fea03b539faeaee9b4ef02a3769b455b189f7fc3"
+  integrity sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==
+
 markdown-it@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-9.0.1.tgz#aafe363c43718720b6575fd10625cde6e4ff2d47"
@@ -6746,11 +6756,6 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-
-nuxt-storage@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/nuxt-storage/-/nuxt-storage-1.2.1.tgz#a7d1360679d3e4d4cba05daa317c8019ccb7a9fb"
-  integrity sha512-CM9Zs9pOkKaepOxG39IVhP8PT4j8BNcZVcRrws4Bw/39Jv/hPTXuuoUGgMc83BON/PwZqRTcIgMpJXcxTCNmXw==
 
 nuxt@^2.0.0:
   version "2.8.1"
@@ -8337,6 +8342,13 @@ relateurl@0.2.x, relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+remove-markdown-extension@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/remove-markdown-extension/-/remove-markdown-extension-1.0.0.tgz#f9ea2cede912b83207d2858536f244e7bd3d5453"
+  integrity sha1-+eos7ekSuDIH0oWFNvJE5709VFM=
+  dependencies:
+    markdown-extensions "^1.1.0"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"

@@ -19,7 +19,7 @@ List of blogs with links on the homepage
 </template>
 v
 <script>
-import blogPosts from '../blog/blogposts.js'
+import blogPosts from './../generatedPosts.js'
 
 export default {
   data: () => {

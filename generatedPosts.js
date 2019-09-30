@@ -1,0 +1,1 @@
+export default ["/blog/2017-a-post-mortem","/blog/2018-a-post-mortem","/blog/designing-and-developing-for-users-with-autism","/blog/getting-started-with-mongoose-discriminators-in-express-js","/blog/how-im-using-gulp-to-maintain-my-website","/blog/my-favorite-tools-in-2017"];

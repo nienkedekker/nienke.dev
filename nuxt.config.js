@@ -1,11 +1,11 @@
 import path from 'path'
-import blogposts from './blog/blogposts.js'
+import generatedPosts from './generatedPosts';
 
 export default {
   mode: 'universal',
   /*
-  ** Headers of the page
-  */
+	** Headers of the page
+	*/
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -18,40 +18,40 @@ export default {
     ]
   },
   /*
-  ** Customize the progress-bar color
-  */
+	** Customize the progress-bar color
+	*/
   loading: { color: '#fff' },
   /*
-  ** Global CSS
-  */
+	** Global CSS
+	*/
   css: [
   ],
   /*
-  ** Plugins to load before mounting the App
-  */
+	** Plugins to load before mounting the App
+	*/
   plugins: [
   ],
   /*
-  ** Nuxt.js modules
-  */
+	** Nuxt.js modules
+	*/
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module'
   ],
   /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
+	** Axios module configuration
+	** See https://axios.nuxtjs.org/options
+	*/
   axios: {
   },
   /*
-  ** Build configuration
-  */
+	** Build configuration
+	*/
   build: {
     /*
-    ** You can extend webpack config here
-    */
+		** You can extend webpack config here
+		*/
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.md$/,
@@ -66,6 +66,6 @@ export default {
     routes: [
       '/blog'
     ]
-      .concat(blogposts.map(w => `/blog/${w}`))
+      .concat(generatedPosts)
   }
 }
