@@ -5,13 +5,14 @@
   "author": "Nienke Dekker",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix ",
     "precommit": "yarn lint",
     "test": "jest",
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "yarn generate:blogposts && nuxt",
+    "build": "yarn generate:blogposts && nuxt build",
+    "start": "yarn generate:blogposts && nuxt start",
+    "generate": "yarn generate:blogposts && nuxt generate",
+    "generate:blogposts": "node blogposts.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
