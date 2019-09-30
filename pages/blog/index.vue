@@ -35,7 +35,7 @@ List of blogs on the /blog page
 v
 <script>
 import BlogHeader from '../../components/blog/BlogHeader.vue';
-import blogPosts from '../../generatedPosts';
+import generatePosts from '../../generatedPosts';
 
 export default {
   components: {
@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     async getBlogPosts() {
-      return Promise.all(blogPosts.map((blog) => this.mapOverBlogs(blog)))
+      return Promise.all(generatePosts.map((blog) => this.mapOverBlogs(blog)))
         .then((response) => this.blogItems.push(response));
     },
     async mapOverBlogs(name) {

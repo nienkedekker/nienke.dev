@@ -1,7 +1,7 @@
 List of blogs with links on the homepage
 
 <template>
-  <section class="blogPosts">
+  <section class="generatePosts">
     <h1 class="title">
       Blog Posts
     </h1>
@@ -30,7 +30,7 @@ List of blogs with links on the homepage
 </template>
 v
 <script>
-import blogPosts from '../generatedPosts';
+import generatePosts from '../generatedPosts';
 
 export default {
   data: () => ({
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     async getBlogPosts() {
-      return Promise.all(blogPosts.map((blog) => this.mapOverBlogs(blog)))
+      return Promise.all(generatePosts.map((blog) => this.mapOverBlogs(blog)))
         .then((response) => this.blogItems.push(response));
     },
     async mapOverBlogs(name) {
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blogPosts {
+.generatePosts {
   grid-area: blogposts;
 }
 
