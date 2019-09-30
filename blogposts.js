@@ -15,7 +15,7 @@ dirTree('./blog/posts', { extensions: /\.md$/ }, null, (item) => {
   directoryTree.push(item.children)
 });
 directoryTree.forEach(((post) => {
-  return blogPosts.push(post.map(i => removeMarkdownExtension(`/blog/${i.name}`)));
+  return blogPosts.push(post.map(i => removeMarkdownExtension(`${i.name}`)));
 }));
 
 const flatSingle = arr => [].concat(...arr);

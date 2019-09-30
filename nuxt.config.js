@@ -65,7 +65,6 @@ export default {
   generate: {
     routes: [
       '/blog'
-    ]
-      .concat(generatedPosts)
+    ].concat(generatedPosts.map(w => `/blog/${w}`))
   }
 }
