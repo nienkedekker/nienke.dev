@@ -1,11 +1,41 @@
 <template>
   <nav class="navigation">
-    All Posts About Twitter Github
+    <ul class="navigationList">
+      <li class="navigationListItem">
+        <nuxt-link to="/blog">
+          All Posts
+        </nuxt-link>
+      </li>
+      <li class="navigationListItem">
+        <nuxt-link to="/">
+          About
+        </nuxt-link>
+      </li>
+      <li class="navigationListItem">
+        <a href="/">Twitter</a>
+      </li>
+      <li class="navigationListItem">
+        <a href="/">GitHub</a>
+      </li>
+    </ul>
   </nav>
 </template>
 <style lang="scss" scoped>
   .navigation {
-		padding: 2em;
-		background: pink;
+		max-width: 640px;
+		margin: 0 auto;
+		padding-top: 1em;
   }
+
+	.navigationList {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navigationListItem {
+		margin: 0;
+		padding: 0 1em 0 0;
+		display: inline;
+	}
 </style>
