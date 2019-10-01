@@ -10,6 +10,9 @@
       <li class="list-item">
         🐙 <a href="https://github.com/nienkedekker">GitHub</a>
       </li>
+      <li class="list-item">
+        📬 <a href="mailto:nienkedekker@gmail.com">E-mail</a>
+      </li>
     </ul>
   </section>
 </template>
@@ -28,6 +31,7 @@ export default {
 .title {
   font-weight: 300;
   margin-bottom: 1em;
+	font-family: 'Playfair Display', serif;
 }
 
 .list-item {

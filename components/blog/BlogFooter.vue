@@ -1,6 +1,6 @@
 <template>
   <footer>
-    footerdwdef
+    <a href="/">Designed & built by Nienke Dekker</a>
   </footer>
 </template>
 <script></script>

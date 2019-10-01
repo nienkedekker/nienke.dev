@@ -24,7 +24,8 @@
   .navigation {
 		max-width: 640px;
 		margin: 0 auto;
-		padding-top: 1em;
+		padding-top: 2em;
+		padding-bottom: 2em;
   }
 
 	.navigationList {

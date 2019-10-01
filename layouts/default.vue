@@ -80,19 +80,28 @@ body, html {
     a, a:visited, a:active {
       color: $dark_link-color;
       background-color: $dark_link-color-bg;
-      border-bottom: 1px solid rgba($dark_link-color, 0.2);
+			text-decoration: none;
+			background-image: linear-gradient(currentColor, currentColor);
+			background-position: 0 100%;
+			background-repeat: no-repeat;
+			background-size: 0 1px;
+			transition: background-size cubic-bezier(0,.25,.5,1) 0.4s;
     }
 
     a:hover {
       color: $dark_link-color-hover;
-    }
+			//border-bottom: 1px solid rgba($dark_link-color, 0.6);
+			text-decoration: none;
+			background-size: 100% 1px;
+		}
+
   }
 }
 
 .themeSwitch {
   position: absolute;
-  top: .5em;
-  right: .5em;
+  top: 1em;
+  right: 1.5em;
   border: 0;
   margin: 0;
   background-color: #05131e;

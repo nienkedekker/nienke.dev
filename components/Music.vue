@@ -62,14 +62,15 @@ export default {
       return 'now playing';
     },
     calculateDate(secAgo) {
-      let agoString; let agoRange; let
-agoScaled;
+      let agoString;
+      let agoRange;
+      let agoScaled;
       if (secAgo >= (agoRange = 60 * 60 * 24)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`;
+        agoString = `listened to this ${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'days' : 'day')} ago`;
       } else if (secAgo >= (agoRange = 60 * 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`;
+        agoString = `listened to this ${(agoScaled = Math.floor(secAgo / agoRange))}  ${(agoScaled > 1 ? 'hours' : 'hour')} ago`;
       } else if (secAgo >= (agoRange = 60)) {
-        agoString = `${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`;
+        agoString = `listened to this ${(agoScaled = Math.floor(secAgo / agoRange))} ${(agoScaled > 1 ? 'minutes' : 'minute')} ago`;
       } else if (secAgo >= -60) {
         agoString = 'listened just now';
       } else {
@@ -86,6 +87,7 @@ agoScaled;
   grid-area: music;
   min-height: 2em;
   margin-top: .5em;
+	margin-bottom: 2em;
 }
 
 a, a:visited, a:active {
@@ -96,7 +98,7 @@ a, a:visited, a:active {
 .songTime {
   font-style: italic;
   margin-left: 5px;
-  font-size: .75em;
+  font-size: .8em;
 }
 
 .svg {

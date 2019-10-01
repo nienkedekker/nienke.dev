@@ -18,7 +18,7 @@ List of blogs on the /blog page
           >
             <nuxt-link
               :key="item.id"
-              :to="`${item.id}`"
+              :to="`/blog/${item.id}`"
             >
               <h2> {{ item.title }}</h2>
               <p class="date">

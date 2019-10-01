@@ -1,8 +1,13 @@
 <template>
   <section class="intro">
-    <p>
-      My name is Nienke Dekker, and I'm a frontend developer from Amsterdam. I sometimes organize things, like the
-      <a href="https://www.stupidhackathon.wtf">Stupid Hackathon Amsterdam</a>. I work at the
+    <h1 class="introHeader">
+      My name is Nienke Dekker,
+    </h1>
+    <p class="introParagraph">
+      and I'm a frontend developer from Amsterdam.
+    </p>
+    <p class="introParagraph">
+      I work at the
       <a href="https://nos.nl">NOS</a>, focusing on creating clean, compliant and performant code.
     </p>
   </section>
@@ -18,8 +23,14 @@ export default {
 .intro {
   grid-area: intro;
 }
+.introHeader {
+	font-size: 3em;
+	font-weight: 400;
+	font-family: 'Playfair Display', serif;
+}
 
-p {
-  font-size: 1.8em;
+.introParagraph {
+  font-size: 1.4em;
+	opacity: 0.8;
 }
 </style>

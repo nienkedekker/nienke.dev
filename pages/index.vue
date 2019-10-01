@@ -49,6 +49,6 @@ export default {
     "music music music . ."
     "blogposts blogposts contact other .";
   padding: 6em 5em;
-  grid-gap: 1em;
+  grid-gap: 2em;
 }
 </style>

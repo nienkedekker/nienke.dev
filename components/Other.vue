@@ -28,6 +28,7 @@ export default {
 .title {
   font-weight: 300;
   margin-bottom: 1em;
+	font-family: 'Playfair Display', serif;
 }
 
 .label {
