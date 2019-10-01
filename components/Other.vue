@@ -1,7 +1,7 @@
 <template>
   <section class="other">
     <h1 class="title">
-      Other
+      > Other
     </h1>
     <ul>
       <li class="list-item">
@@ -26,9 +26,14 @@ export default {
 }
 
 .title {
-  font-weight: 300;
-  margin-bottom: 1em;
-	font-family: 'Playfair Display', serif;
+	margin-bottom: 1em;
+	font-family: 'Fira Mono', monospace;
+	text-transform: uppercase;
+	font-size: .75em;
+	letter-spacing: 1px;
+	font-weight: normal;
+	color: #cba7cb;
+
 }
 
 .label {

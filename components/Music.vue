@@ -84,10 +84,11 @@ export default {
 
 <style lang="scss" scoped>
 .music {
-  grid-area: music;
-  min-height: 2em;
-  margin-top: .5em;
-	margin-bottom: 2em;
+	padding: 2em;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	border-bottom: 1px solid #5a5697;
 }
 
 a, a:visited, a:active {
@@ -96,9 +97,13 @@ a, a:visited, a:active {
 }
 
 .songTime {
-  font-style: italic;
-  margin-left: 5px;
-  font-size: .8em;
+  margin-left: 15px;
+	margin-bottom: 1em;
+	font-family: 'Fira Mono', monospace;
+	text-transform: uppercase;
+	font-size: .75em;
+	letter-spacing: 1px;
+	font-weight: normal;
 }
 
 .svg {

@@ -2,11 +2,11 @@ no-ssr is used for blog posts and music, which can only be loaded when JS is ena
 
 <template>
   <div class="index">
+    <no-ssr>
+      <music />
+    </no-ssr>
     <div class="indexWrapper">
       <intro />
-      <no-ssr>
-        <music />
-      </no-ssr>
       <no-ssr placeholder="Loading blog posts.. make sure you have JavaScript enabled 👀">
         <blog-posts />
       </no-ssr>
@@ -41,14 +41,22 @@ export default {
 }
 
 .indexWrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "intro intro intro intro intro"
-    "music music music . ."
-    "blogposts blogposts contact other .";
-  padding: 6em 5em;
-  grid-gap: 2em;
+	padding: 2em 2.5em;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"intro"
+		"blogposts"
+		"contact"
+		"other";
+	grid-gap: 2em;
+	@media (min-width: 800px) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas: "intro intro intro intro intro" "blogposts blogposts contact other .";
+	}
+	@media (min-width: 1100px) {
+		padding: 4em 5em;
+	}
 }
 </style>

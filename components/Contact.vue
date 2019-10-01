@@ -1,7 +1,7 @@
 <template>
   <section class="contact">
     <h1 class="title">
-      Get in touch
+      > Get in touch
     </h1>
     <ul>
       <li class="list-item">
@@ -24,14 +24,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	@import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
 .contact {
   grid-area: contact;
 }
 
 .title {
-  font-weight: 300;
   margin-bottom: 1em;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Fira Mono', monospace;
+	text-transform: uppercase;
+	font-size: .75em;
+	letter-spacing: 1px;
+	font-weight: normal;
+	color: #cba7cb;
 }
 
 .list-item {

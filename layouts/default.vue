@@ -94,7 +94,6 @@ body, html {
 			text-decoration: none;
 			background-size: 100% 1px;
 		}
-
   }
 }
 
