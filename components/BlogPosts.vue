@@ -16,10 +16,12 @@ List of blogs with links on the homepage
         class="item"
         :to="`blog/${item.id}`"
       >
-        {{ item.title }}
-        <div class="date">
-          {{ item.date }}
+        <div class="itemTitle">
+          {{ item.title }}
         </div>
+        <span class="itemDate">
+          {{ item.date }}
+        </span>
       </nuxt-link>
     </div>
   </section>
@@ -66,14 +68,14 @@ export default {
 .item {
 	display: block;
   margin-bottom: 2em;
-	border-left: 1px solid rgba(#cba7cb, 0.3);
-	padding: 0 0 0 1em;
 	background-image: none;
 }
 
-.date {
+.itemTitle {
+	margin-bottom: .35em;
+}
+.itemDate {
   font-size: .75em;
-  margin: .5em 0;
 	color: #bebef4;
 }
 
