@@ -1,11 +1,11 @@
 <template>
-  <header>
+  <nav class="navigation">
     All Posts About Twitter Github
-  </header>
+  </nav>
 </template>
-<script></script>
 <style lang="scss" scoped>
-  header {
-    background: green;
+  .navigation {
+		padding: 2em;
+		background: pink;
   }
 </style>

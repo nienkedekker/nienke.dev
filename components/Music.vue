@@ -104,6 +104,7 @@ a, a:visited, a:active {
   height: 20px;
   margin-right: 10px;
   vertical-align: text-top;
+  fill: currentColor;
 }
 
 .playing {

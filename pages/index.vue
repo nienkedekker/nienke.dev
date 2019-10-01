@@ -1,11 +1,13 @@
+no-ssr is used for blog posts and music, which can only be loaded when JS is enabled.
+
 <template>
   <div class="index">
     <div class="indexWrapper">
       <intro />
-      <no-ssr placeholder="Loading..">
+      <no-ssr>
         <music />
       </no-ssr>
-      <no-ssr placeholder="Loading..">
+      <no-ssr placeholder="Loading blog posts.. make sure you have JavaScript enabled 👀">
         <blog-posts />
       </no-ssr>
       <contact />

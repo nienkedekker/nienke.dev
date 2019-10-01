@@ -1,17 +1,19 @@
 Single blog post
 
 <template>
-  <section class="blogPost">
+  <div>
     <blog-header />
-    <div class="blogPostWrapper">
-      <h1>{{ title }}</h1>
-      <p class="date">
-        {{ date }}
-      </p>
-      <span v-html="html" />
-    </div>
-    <blog-footer />
-  </section>
+    <section class="blogPost">
+      <div class="blogPostWrapper">
+        <h1>{{ title }}</h1>
+        <p class="date">
+          {{ date }}
+        </p>
+        <span v-html="html" />
+      </div>
+      <blog-footer />
+    </section>
+  </div>
 </template>
 
 <script>

@@ -22,6 +22,7 @@ module.exports = {
     'no-cond-assign': 'off',
     'indent': 'off',
     'max-len': 0,
+	  'no-tabs': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off', // Allow console in development but not on production
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off', // Allow debugger in development but not on production
   },

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    footer
+    footerdwdef
   </footer>
 </template>
 <script></script>

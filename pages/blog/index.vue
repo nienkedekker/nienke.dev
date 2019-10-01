@@ -1,36 +1,38 @@
 List of blogs on the /blog page
 
 <template>
-  <section class="blogIndex">
+  <div>
     <blog-header />
-    <div class="blogIndexWrapper">
-      <h1>Blog</h1>
-      <ul
-        v-for="blogItem in blogItems"
-        :key="blogItem.id"
-        class="list"
-      >
-        <li
-          v-for="item in blogItem"
-          :key="item.id"
-          class="listItem"
+    <section class="blogIndex">
+      <div class="blogIndexWrapper">
+        <h1>Blog</h1>
+        <ul
+          v-for="blogItem in blogItems"
+          :key="blogItem.id"
+          class="list"
         >
-          <nuxt-link
+          <li
+            v-for="item in blogItem"
             :key="item.id"
-            :to="`${item.id}`"
+            class="listItem"
           >
-            <h2> {{ item.title }}</h2>
-            <p class="date">
-              {{ item.date }}
-            </p>
-            <p class="description">
-              {{ item.description }}
-            </p>
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-  </section>
+            <nuxt-link
+              :key="item.id"
+              :to="`${item.id}`"
+            >
+              <h2> {{ item.title }}</h2>
+              <p class="date">
+                {{ item.date }}
+              </p>
+              <p class="description">
+                {{ item.description }}
+              </p>
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 </template>
 v
 <script>
@@ -62,7 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 .blogIndex {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   margin: 0 auto;
   max-width: 640px;
 }
