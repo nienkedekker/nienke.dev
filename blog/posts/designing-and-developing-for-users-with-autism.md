@@ -2,6 +2,7 @@
 name: 'designing-and-developing-for-users-with-autism'
 title: Designing and Developing for Users with Autism
 date: 22 June 2018
+dateISO: 2018-06-22
 id: 'designing-and-developing-for-users-with-autism'
 description: |
   On June 16th, 2018 I gave a lightning talk at role=drinks about designing and developing web applications for users with autism. Here's the talk in article form.

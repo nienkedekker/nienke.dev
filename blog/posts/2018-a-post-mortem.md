@@ -2,6 +2,7 @@
 name: '2018-a-post-mortem'
 title: 2018, A Post Mortem
 date: 31 December 2018
+dateISO: 2018-12-31
 id: '2018-a-post-mortem'
 description: |
  It's been over a year since I wrote 2017: A Post Mortem, and a lot has happened!

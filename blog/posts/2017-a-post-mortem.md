@@ -2,6 +2,7 @@
 name: '2017-a-post-mortem'
 title: 2017, A Post Mortem
 date: 23 December 2017
+dateISO: 2017-12-23
 id: '2017-a-post-mortem'
 description: |
  2017 has been a very wild ride so far, and I wanted to look back on everything that's happened, career-wise 👩‍💻.

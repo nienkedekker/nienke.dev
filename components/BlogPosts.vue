@@ -5,7 +5,7 @@ List of blogs with links on the homepage
     <h1 class="title">
       > Blog Posts
     </h1>
-    <div
+    <ul
       v-for="blogItem in blogItems"
       :key="blogItem.id"
       class="items"
@@ -16,14 +16,16 @@ List of blogs with links on the homepage
         class="item"
         :to="`blog/${item.id}`"
       >
-        <div class="itemTitle">
-          {{ item.title }}
-        </div>
-        <span class="itemDate">
-          {{ item.date }}
-        </span>
+        <li>
+          <h2 class="itemTitle">
+            {{ item.title }}
+          </h2>
+          <p class="itemDate">
+            {{ item.date }}
+          </p>
+        </li>
       </nuxt-link>
-    </div>
+    </ul>
   </section>
 </template>
 v
@@ -67,16 +69,28 @@ export default {
 
 .item {
 	display: block;
-  margin-bottom: 2em;
 	background-image: none;
+	line-height: 2;
+	font-size: .9em;
+	margin-left: 1em;
+	border-bottom: 1px solid #3b375e;
+
+	li {
+		list-style: circle;
+	}
 }
 
 .itemTitle {
-	margin-bottom: .35em;
+	display: inline;
+	font-weight: normal;
+	line-height: 2;
+	font-size: .9em;
 }
+
 .itemDate {
   font-size: .75em;
-	color: #bebef4;
+	color: #dddff4;
+	display: inline;
 }
 
 a, a:link, a:visited {

@@ -5,13 +5,13 @@
     </h1>
     <ul>
       <li class="list-item">
-        🐦 <a href="https://twitter.com/helenasometimes">Twitter</a>
+        🐦&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/helenasometimes">Twitter</a>
       </li>
       <li class="list-item">
-        🐙 <a href="https://github.com/nienkedekker">GitHub</a>
+        🐙&nbsp;&nbsp;&nbsp;<a href="https://github.com/nienkedekker">GitHub</a>
       </li>
       <li class="list-item">
-        📬 <a href="mailto:nienkedekker@gmail.com">E-mail</a>
+        📬&nbsp;&nbsp;&nbsp;<a href="mailto:nienkedekker@gmail.com">E-mail</a>
       </li>
     </ul>
   </section>
@@ -41,6 +41,8 @@ export default {
 
 .list-item {
   margin: 5px 0;
+	line-height: 2;
+	font-size: .9em;
 }
 
 a, a:link, a:visited {

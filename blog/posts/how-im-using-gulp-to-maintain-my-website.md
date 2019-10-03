@@ -2,6 +2,7 @@
 name: 'how-im-using-gulp-to-maintain-my-website'
 title: How I'm using Gulp to maintain my website
 date: 24 September 2017
+dateISO: 2017-09-24
 id: 'how-im-using-gulp-to-maintain-my-website'
 description: |
   I use a single Gulpfile to automate website development. Here's how!

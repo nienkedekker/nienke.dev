@@ -5,10 +5,10 @@
     </h1>
     <ul>
       <li class="list-item">
-        👩‍💻 <a href="/humans.txt">Humans.txt</a>
+        👩‍💻&nbsp;&nbsp;&nbsp;<a href="/humans.txt">Humans.txt</a>
       </li>
       <li class="list-item">
-        🚧 <a href="https://what.pm">what.pm</a> <span class="label"> forever sideproject ✨</span>
+        🚧&nbsp;&nbsp;&nbsp;<a href="https://what.pm">what.pm</a> <span class="label"> forever sideproject ✨</span>
       </li>
     </ul>
   </section>
@@ -32,7 +32,6 @@ export default {
 	font-size: .75em;
 	letter-spacing: 1px;
 	font-weight: normal;
-	color: #cba7cb;
 
 }
 
@@ -44,6 +43,8 @@ export default {
 
 .list-item {
   margin: 5px 0;
+	line-height: 2;
+	font-size: .9em;
 }
 
 a, a:link, a:visited {
