@@ -8,7 +8,7 @@
       </li>
       <li class="navigationListItem">
         <nuxt-link to="/">
-          About
+          Homepage
         </nuxt-link>
       </li>
       <li class="navigationListItem">
@@ -22,10 +22,16 @@
 </template>
 <style lang="scss" scoped>
   .navigation {
+		display: flex;
+		justify-content: flex-start;
 		max-width: 640px;
 		margin: 0 auto;
-		padding-top: 2em;
-		padding-bottom: 2em;
+		padding: 3em 0 0 0;
+		text-transform: uppercase;
+		font-family: 'Fira Mono', monospace;
+		font-size: .75em;
+		letter-spacing: 1px;
+		font-weight: normal;
   }
 
 	.navigationList {

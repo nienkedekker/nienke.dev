@@ -14,6 +14,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'vue/html-self-closing': 'off',
     'vue/no-v-html': 'off',
+	  'dot-notation': 0,
     'vue/html-indent': ['error', 2, {
       'attribute': 1,
       'closeBracket': 0,
