@@ -32,7 +32,7 @@ export default {
 	font-size: .75em;
 	letter-spacing: 1px;
 	font-weight: normal;
-
+	color: #cba7cb;
 }
 
 .label {

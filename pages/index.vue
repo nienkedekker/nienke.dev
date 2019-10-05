@@ -2,9 +2,6 @@ no-ssr is used for blog posts and music, which can only be loaded when JS is ena
 
 <template>
   <div class="index">
-    <no-ssr>
-      <music />
-    </no-ssr>
     <div class="indexWrapper">
       <intro />
       <no-ssr placeholder="Loading blog posts.. make sure you have JavaScript enabled 👀">
@@ -20,7 +17,6 @@ no-ssr is used for blog posts and music, which can only be loaded when JS is ena
 import BlogPosts from '../components/BlogPosts';
 import Contact from '../components/Contact';
 import Intro from '../components/Intro';
-import Music from '../components/Music';
 import Other from '../components/Other';
 
 export default {
@@ -28,7 +24,6 @@ export default {
     BlogPosts,
     Contact,
     Intro,
-    Music,
     Other,
   },
 };

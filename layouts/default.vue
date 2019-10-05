@@ -1,16 +1,24 @@
 <template>
   <main :class="theme">
-    <button
-      class="themeSwitch"
-      @click="switchTheme"
-    >
-      {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
-    </button>
+    <header>
+      <no-ssr>
+        <music />
+      </no-ssr>
+      <button
+        class="themeSwitch"
+        @click="switchTheme"
+      >
+        {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
+      </button>
+    </header>
     <nuxt />
   </main>
 </template>
 <script>
+	import Music from '../components/Music';
+
 export default {
+  components: { Music },
   data: () => ({
       theme: 'dark',
     }),
@@ -97,10 +105,20 @@ body, html {
   }
 }
 
+header {
+	padding: 2em;
+	min-height: 100px;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #5a5697;
+	display: flex;
+	@media (min-width: 800px) {
+		display: flex;
+		justify-content: center;
+	}
+}
+
 .themeSwitch {
-  position: absolute;
-  top: 1em;
-  right: 1.5em;
   border: 0;
   margin: 0;
   background-color: #05131e;
@@ -109,14 +127,22 @@ body, html {
   padding: 8px 15px 5px 10px;
   border-radius: 6px;
   cursor: pointer;
+	@media (min-width: 800px) {
+		position: absolute;
+		top: 1.25em;
+		right: 1.5em;
+	}
 }
 
 .themeSwitchText {
   font-size: .8rem;
   padding-left: 5px;
   margin-top: 4px;
-  display: inline-block;
   vertical-align: text-top;
+	display: none;
+	@media (min-width: 600px) {
+		display: inline-block;
+	}
 }
 
 *,

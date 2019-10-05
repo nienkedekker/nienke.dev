@@ -84,11 +84,9 @@ export default {
 
 <style lang="scss" scoped>
 .music {
-	padding: 2em;
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	border-bottom: 1px solid #5a5697;
 }
 
 a, a:visited, a:active {
