@@ -1,8 +1,8 @@
 ---
 name: 'getting-started-with-mongoose-discriminators-in-express-js'
 title: Getting started with Mongoose discriminators in Express.js
-date: 09 February 2017
-dateISO: 2017-02-09
+date: 09 February 2018
+dateISO: 2018-02-09
 id: 'getting-started-with-mongoose-discriminators-in-express-js'
 description: |
   A starter's guide to extending Mongoose Schemas in Express.js.
