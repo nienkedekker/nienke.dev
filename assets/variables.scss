@@ -4,6 +4,9 @@ $light_font-color: #102740;
 $light_link-color: #000;
 $light_link-color-bg: #dbeaff;
 $light_link-color-hover: #1c4470;
+$light_title-color: #29233e;
+$light_item-date: #15162c;
+$light-item-border-bottom: #cba7cb;
 
 // Dark theme
 $dark_bg-color: #15162c;
@@ -12,5 +15,8 @@ $dark_font-color: #a9bde0;
 $dark_link-color: #9b9bce;
 $dark_link-color-bg: #29233e;
 $dark_link-color-hover: #7d7497;
+$dark_title-color: #cba7cb;
+$dark_item-date: #dddff4;
+$dark-item-border-bottom: #3b375e;
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');

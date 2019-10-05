@@ -70,10 +70,21 @@ body, html {
     background-color: $light_bg-color;
     color: $light_font-color;
 
+		.title {
+			color: $light_title-color;
+		}
+
+		.blogDate {
+			color: $light_item-date;
+		}
+
+		.blogItem {
+			border-bottom: 1px solid $light-item-border-bottom;
+		}
+
     a, a:visited, a:active {
       color: $light_link-color;
       background-color: $light_link-color-bg;
-      border-bottom: 1px solid rgba($light_link-color, 0.2);
     }
 
     a:hover {
@@ -84,6 +95,18 @@ body, html {
   .dark {
     background-color: $dark_bg-color;
     color: $dark_font-color;
+
+		.title {
+			color: $dark_title-color;
+		}
+
+		.blogItem {
+			border-bottom: 1px solid $dark-item-border-bottom;
+		}
+
+		.blogDate {
+			color: $dark_item-date;
+		}
 
     a, a:visited, a:active {
       color: $dark_link-color;
@@ -98,7 +121,6 @@ body, html {
 
     a:hover {
       color: $dark_link-color-hover;
-			//border-bottom: 1px solid rgba($dark_link-color, 0.6);
 			text-decoration: none;
 			background-size: 100% 1px;
 		}

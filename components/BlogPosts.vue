@@ -8,19 +8,19 @@ List of blogs with links on the homepage
     <ul
       v-for="blogItem in blogItems"
       :key="blogItem.id"
-      class="items"
+      class="blogItems"
     >
       <nuxt-link
         v-for="item in blogItem"
         :key="item.id"
-        class="item"
+        class="blogItem"
         :to="`blog/${item.id}`"
       >
         <li>
-          <h2 class="itemTitle">
+          <h2 class="blogTitle">
             {{ item.title }}
           </h2>
-          <p class="itemDate">
+          <p class="blogDate">
             {{ item.date }}
           </p>
         </li>
@@ -64,32 +64,29 @@ export default {
 	font-size: .75em;
 	letter-spacing: 1px;
 	font-weight: normal;
-	color: #cba7cb;
 }
 
-.item {
+.blogItem {
 	display: block;
 	background-image: none;
 	line-height: 2;
 	font-size: .9em;
 	margin-left: 1em;
-	border-bottom: 1px solid #3b375e;
 
 	li {
 		list-style: circle;
 	}
 }
 
-.itemTitle {
+.blogTitle {
 	display: inline;
 	font-weight: normal;
 	line-height: 2;
 	font-size: .9em;
 }
 
-.itemDate {
+.blogDate {
   font-size: .75em;
-	color: #dddff4;
 	display: inline;
 }
 

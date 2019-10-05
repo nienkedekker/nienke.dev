@@ -27,6 +27,7 @@ export default {
 	@import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
 .contact {
   grid-area: contact;
+	margin-left: 3em;
 }
 
 .title {
@@ -36,13 +37,12 @@ export default {
 	font-size: .75em;
 	letter-spacing: 1px;
 	font-weight: normal;
-	color: #cba7cb;
 }
 
 .list-item {
   margin: 5px 0;
 	line-height: 2;
-	font-size: .9em;
+	font-size: .8em;
 }
 
 a, a:link, a:visited {
