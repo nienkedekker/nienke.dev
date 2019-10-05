@@ -37,7 +37,7 @@ List of blogs on the /blog page
 v
 <script>
 import BlogHeader from '../../components/blog/BlogHeader.vue';
-import generatePosts from '../../generatedPosts';
+import generatedPosts from '../../generatedPosts';
 
 export default {
   components: {
@@ -51,12 +51,25 @@ export default {
   },
   methods: {
     async getBlogPosts() {
-      return Promise.all(generatePosts.map((blog) => this.mapOverBlogs(blog)))
-        .then((response) => this.blogItems.push(response));
+      return Promise.all(generatedPosts.map((blog) => this.mapOverBlogs(blog)))
+        .then((response) => {
+          this.sortDates(response);
+          this.blogItems.push(response);
+        });
     },
     async mapOverBlogs(name) {
       const markdownContents = await import(`~/blog/posts/${name}.md`);
       return markdownContents.attributes;
+    },
+    async sortDates(response) {
+      response.sort((a, b) => {
+        // eslint-disable-next-line no-param-reassign
+        a = new Date(a.dateISO);
+        // eslint-disable-next-line no-param-reassign
+        b = new Date(b.dateISO);
+        // eslint-disable-next-line no-param-reassign, no-nested-ternary
+        return a > b ? -1 : a < b ? 1 : 0;
+      });
     },
   },
 };

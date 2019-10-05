@@ -57,11 +57,11 @@ export default {
         a = new Date(a.dateISO);
 				// eslint-disable-next-line no-param-reassign
         b = new Date(b.dateISO);
-        // eslint-disable-next-line no-param-reassign,no-nested-ternary
+        // eslint-disable-next-line no-param-reassign, no-nested-ternary
         return a > b ? -1 : a < b ? 1 : 0;
       });
     },
-},
+	},
 };
 </script>
 
