@@ -2,7 +2,7 @@ List of blogs with links on the homepage
 
 <template>
   <section class="blogPosts">
-    <h1 class="title">
+    <h1 class="sectionTitle">
       > Blog Posts
     </h1>
     <ul
@@ -55,15 +55,6 @@ export default {
 <style lang="scss" scoped>
 .blogPosts {
   grid-area: blogposts;
-}
-
-.title {
-	margin-bottom: 1em;
-	font-family: 'Fira Mono', monospace;
-	text-transform: uppercase;
-	font-size: .75em;
-	letter-spacing: 1px;
-	font-weight: normal;
 }
 
 .blogItem {

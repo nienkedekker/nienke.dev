@@ -1,13 +1,13 @@
 <template>
   <section class="other">
-    <h1 class="title">
+    <h1 class="sectionTitle">
       > Other
     </h1>
     <ul>
-      <li class="list-item">
+      <li class="listItem">
         👩‍💻&nbsp;&nbsp;&nbsp;<a href="/humans.txt">humans.txt</a>
       </li>
-      <li class="list-item">
+      <li class="listItem">
         🚧&nbsp;&nbsp;&nbsp;<a href="https://what.pm">what.pm</a> <span class="label"> forever sideproject ✨</span>
       </li>
     </ul>
@@ -25,25 +25,10 @@ export default {
   grid-area: other;
 }
 
-.title {
-	margin-bottom: 1em;
-	font-family: 'Fira Mono', monospace;
-	text-transform: uppercase;
-	font-size: .75em;
-	letter-spacing: 1px;
-	font-weight: normal;
-}
-
 .label {
   font-size: .75em;
   padding: 5px 5px 5px 10px;
   border-radius: 10px;
-}
-
-.list-item {
-  margin: 5px 0;
-	line-height: 2;
-	font-size: .8em;
 }
 
 a, a:link, a:visited {

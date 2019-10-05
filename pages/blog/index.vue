@@ -14,7 +14,7 @@ List of blogs on the /blog page
           <li
             v-for="item in blogItem"
             :key="item.id"
-            class="listItem"
+            class="todo-listItem"
           >
             <nuxt-link
               :key="item.id"
@@ -64,7 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 .blogIndex {
-  /*min-height: 100vh;*/
   margin: 0 auto;
   max-width: 640px;
 }
@@ -87,7 +86,7 @@ export default {
 
 .list {}
 
-.listItem {
+.todo-listItem {
   margin-bottom: 2em;
 
   h2 {

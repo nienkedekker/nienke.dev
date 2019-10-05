@@ -1,16 +1,16 @@
 <template>
   <section class="contact">
-    <h1 class="title">
+    <h1 class="sectionTitle">
       > Get in touch
     </h1>
     <ul>
-      <li class="list-item">
+      <li class="listItem">
         🐦&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/helenasometimes">Twitter</a>
       </li>
-      <li class="list-item">
+      <li class="listItem">
         🐙&nbsp;&nbsp;&nbsp;<a href="https://github.com/nienkedekker">GitHub</a>
       </li>
-      <li class="list-item">
+      <li class="listItem">
         📬&nbsp;&nbsp;&nbsp;<a href="mailto:nienkedekker@gmail.com">E-mail</a>
       </li>
     </ul>
@@ -28,21 +28,6 @@ export default {
 .contact {
   grid-area: contact;
 	margin-left: 3em;
-}
-
-.title {
-  margin-bottom: 1em;
-	font-family: 'Fira Mono', monospace;
-	text-transform: uppercase;
-	font-size: .75em;
-	letter-spacing: 1px;
-	font-weight: normal;
-}
-
-.list-item {
-  margin: 5px 0;
-	line-height: 2;
-	font-size: .8em;
 }
 
 a, a:link, a:visited {

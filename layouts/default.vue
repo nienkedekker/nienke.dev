@@ -66,11 +66,26 @@ body, html {
   line-height: 1.5;
   background: black;
 
+	.sectionTitle {
+		margin-bottom: 1em;
+		font-family: 'Fira Mono', monospace;
+		text-transform: uppercase;
+		font-size: .75em;
+		letter-spacing: 1px;
+		font-weight: normal;
+	}
+
+	.listItem {
+		margin: 5px 0;
+		line-height: 2;
+		font-size: .8em;
+	}
+
   .light {
     background-color: $light_bg-color;
     color: $light_font-color;
 
-		.title {
+		.sectionTitle {
 			color: $light_title-color;
 		}
 
@@ -96,7 +111,7 @@ body, html {
     background-color: $dark_bg-color;
     color: $dark_font-color;
 
-		.title {
+		.sectionTitle {
 			color: $dark_title-color;
 		}
 
