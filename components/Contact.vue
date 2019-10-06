@@ -27,7 +27,6 @@ export default {
 	@import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
 .contact {
   grid-area: contact;
-	margin-left: 3em;
 }
 
 a, a:link, a:visited {
