@@ -2,30 +2,28 @@ List of blogs on the /blog page
 
 <template>
   <div>
-    <blog-header />
     <section class="blogIndex">
       <div class="blogIndexWrapper">
         <h1>Blog</h1>
         <ul
-          v-for="blogItem in blogItems"
+          v-for="blogItem in blogs"
           :key="blogItem.id"
           class="list"
         >
           <li
-            v-for="item in blogItem"
-            :key="item.id"
+            :key="blogItem.id"
             class="todo-listItem"
           >
             <nuxt-link
-              :key="item.id"
-              :to="`/blog/${item.id}`"
+              :key="blogItem.id"
+              :to="`/blog/${blogItem.id}`"
             >
-              <h2> {{ item.title }}</h2>
+              <h2> {{ blogItem.title }}</h2>
               <p class="date">
-                {{ item.date }}
+                {{ blogItem.date }}
               </p>
               <p class="description">
-                {{ item.description }}
+                {{ blogItem.description }}
               </p>
             </nuxt-link>
           </li>
@@ -34,77 +32,70 @@ List of blogs on the /blog page
     </section>
   </div>
 </template>
-v
+
 <script>
-import BlogHeader from '../../components/blog/BlogHeader.vue';
 import generatedPosts from '../../generatedPosts';
 
 export default {
-  components: {
-    BlogHeader,
-  },
-  data: () => ({
-        blogItems: [],
-    }),
-  mounted() {
-    this.getBlogPosts();
-  },
-  methods: {
-    async getBlogPosts() {
-      return Promise.all(generatedPosts.map((blog) => this.mapOverBlogs(blog)))
-        .then((response) => {
-          this.sortDates(response);
-          this.blogItems.push(response);
-        });
-    },
-    async mapOverBlogs(name) {
-      const markdownContents = await import(`~/blog/posts/${name}.md`);
-      return markdownContents.attributes;
-    },
-    async sortDates(response) {
-      response.sort((a, b) => {
-        // eslint-disable-next-line no-param-reassign
-        a = new Date(a.dateISO);
-        // eslint-disable-next-line no-param-reassign
-        b = new Date(b.dateISO);
-        // eslint-disable-next-line no-param-reassign, no-nested-ternary
-        return a > b ? -1 : a < b ? 1 : 0;
-      });
-    },
-  },
+	async asyncData() {
+		// Sort blog posts by their ISO dates, from newest to oldest
+		async function sortDates(response) {
+			response.sort((a, b) => {
+				a = new Date(a.dateISO);
+				b = new Date(b.dateISO);
+				return a > b ? -1 : a < b ? 1 : 0;
+			});
+		}
+
+		// Import blog posts' markdown contents
+		async function asyncImport(name) {
+			const markdownContents = await import(`~/blog/posts/${name}.md`);
+			return markdownContents.attributes;
+		}
+
+		// Get the array of blog posts, get their mark down contents,
+		// sort dates, and return the response
+		return Promise.all(generatedPosts.map((blog) => asyncImport(blog)))
+			.then((response) => {
+				sortDates(response);
+				return {
+					blogs: response,
+				};
+			});
+	},
 };
 </script>
 
 <style lang="scss" scoped>
-.blogIndex {
-  margin: 0 auto;
-  max-width: 640px;
-}
+	.blogIndex {
+		margin: 0 auto;
+		max-width: 640px;
+	}
 
-.blogIndexWrapper {
-  padding: 50px 0;
-  line-height: 1.85em;
+	.blogIndexWrapper {
+		padding: 50px 0;
+		line-height: 1.85em;
 
-  h1 {
-    font-weight: normal;
-    margin-bottom: 2em;
-  }
-}
+		h1 {
+			font-weight: normal;
+			margin-bottom: 2em;
+		}
+	}
 
-.date {
-  font-size: .75em;
-  margin: .5em 0;
-}
-.description {}
+	.date {
+		font-size: .75em;
+		margin: .5em 0;
+	}
+	.description {}
 
-.list {}
+	.list {}
 
-.todo-listItem {
-  margin-bottom: 2em;
+	.todo-listItem {
+		margin-bottom: 2em;
 
-  h2 {
-    font-weight: 300;
-    text-decoration: underline;
-  }
-}
+		h2 {
+			font-weight: 300;
+			text-decoration: underline;
+		}
+	}
 </style>

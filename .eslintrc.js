@@ -10,11 +10,15 @@ module.exports = {
     'plugin:vue/recommended',
   ],
   rules: {
+  	'no-param-reassign': 0,
     'import/no-unresolved': 0,
+	  'no-nested-ternary': 0,
     'import/prefer-default-export': 0,
+	  'import/no-useless-path-segments': 0,
     'vue/html-self-closing': 'off',
     'vue/no-v-html': 'off',
 	  'dot-notation': 0,
+	  'no-unused-vars': 0,
     'vue/html-indent': ['error', 2, {
       'attribute': 1,
       'closeBracket': 0,
