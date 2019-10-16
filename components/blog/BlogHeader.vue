@@ -2,11 +2,15 @@
   <nav class="navigation">
     <ul class="navigationList">
       <li class="navigationListItem">
-        <nuxt-link to="/">Home</nuxt-link>
+        <nuxt-link to="/">
+          Home
+        </nuxt-link>
       </li>
       >
       <li class="navigationListItem">
-        <nuxt-link to="/blog">Blog</nuxt-link>
+        <nuxt-link to="/blog">
+          Blog
+        </nuxt-link>
       </li>
       >
       <li class="navigationListItem">
