@@ -2,26 +2,31 @@
   <nav class="navigation">
     <ul class="navigationList">
       <li class="navigationListItem">
-        <nuxt-link to="/blog">
-          All Posts
-        </nuxt-link>
+        <nuxt-link to="/">Home</nuxt-link>
       </li>
+      >
       <li class="navigationListItem">
-        <nuxt-link to="/">
-          Homepage
-        </nuxt-link>
+        <nuxt-link to="/blog">Blog</nuxt-link>
       </li>
+      >
       <li class="navigationListItem">
-        <a href="/">Twitter</a>
-      </li>
-      <li class="navigationListItem">
-        <a href="/">GitHub</a>
+        {{ title }}
       </li>
     </ul>
   </nav>
 </template>
+<script>
+	export default {
+		props: {
+			title: {
+				type: String,
+				required: true,
+			},
+		},
+	};
+</script>
 <style lang="scss" scoped>
-  .navigation {
+	.navigation {
 		display: flex;
 		justify-content: flex-start;
 		max-width: 640px;
@@ -32,17 +37,17 @@
 		font-size: .75em;
 		letter-spacing: 1px;
 		font-weight: normal;
-  }
+	}
 
 	.navigationList {
-		list-style-type: none;
+		list-style-type: circle;
 		margin: 0;
 		padding: 0;
 	}
 
 	.navigationListItem {
 		margin: 0;
-		padding: 0 1em 0 0;
+		padding: 0;
 		display: inline;
 	}
 </style>

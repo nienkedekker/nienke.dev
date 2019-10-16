@@ -1,14 +1,14 @@
 Single blog post
 
 <template>
-  <div>
-    <blog-header />
+  <div class="blogPostContainer">
+    <blog-header :title="title" />
     <section class="blogPost">
       <div class="blogPostWrapper">
-        <h1>{{ title }}</h1>
         <p class="date">
-          {{ date }}
+          "{{ title }}" was published on {{ date }}
         </p>
+        <hr>
         <span v-html="html" />
       </div>
       <blog-footer />
@@ -47,9 +47,15 @@ export default {
 </script>
 
 <style lang="scss">
+
+.blogPostContainer {
+	padding: 2em 2.5em;
+}
+
 .blogPost {
   max-width: 640px;
   margin: 0 auto;
+	font-size: .9em;
 }
 
 .blogPostWrapper {
@@ -58,16 +64,17 @@ export default {
   h1, h2, h3 {
     font-weight: 400;
     margin-bottom: .5em;
-    margin-top: 1em;
-  }
+    margin-top: 2em;
+		font-family: 'Inter', sans-serif;
+	}
 
   p {
     margin: 1em 0;
-  }
+	}
 }
 
 .date {
-  font-size: .75em;
+  font-size: .85em;
   margin-bottom: 2em;
 }
 
@@ -76,12 +83,18 @@ img {
 }
 
 code {
-  background: #dfdfdf;
-  color: #d65a50;
+	background: black;
+	color: white;
   display: block;
   padding: 1em;
   white-space: pre-wrap;
   border-radius: 1em;
   margin: 1em 0;
+}
+
+em {
+	background: black;
+	color: white;
+	padding: .2em;
 }
 </style>

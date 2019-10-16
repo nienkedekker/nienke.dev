@@ -58,6 +58,8 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/variables.scss';
+@import url('https://rsms.me/inter/inter.css');
+
 body, html {
   font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif;
   display: block;
@@ -76,7 +78,7 @@ body, html {
 	}
 
 	.listItem {
-		margin: 5px 0;
+		margin: 5px 0 0 0;
 		line-height: 2;
 		font-size: .8em;
 	}
@@ -84,6 +86,10 @@ body, html {
   .light {
     background-color: $light_bg-color;
     color: $light_font-color;
+
+		hr {
+			border-bottom: 1px dashed $light_font-color;
+		}
 
 		.sectionTitle {
 			color: $light_title-color;
@@ -110,6 +116,10 @@ body, html {
   .dark {
     background-color: $dark_bg-color;
     color: $dark_font-color;
+
+		hr {
+			border-bottom: 1px dashed $dark_font-color;
+		}
 
 		.sectionTitle {
 			color: $dark_title-color;
@@ -143,32 +153,28 @@ body, html {
 }
 
 header {
-	padding: 2em;
+	padding: 2em 2.5em;
 	min-height: 100px;
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #5a5697;
 	display: flex;
-	@media (min-width: 800px) {
-		display: flex;
-		justify-content: center;
+	@media (min-width: 1100px) {
+		padding: 2em 5em 2em 5em;
+		justify-content: space-between;
 	}
 }
 
 .themeSwitch {
   border: 0;
-  margin: 0;
+  margin-left: 1em;
   background-color: #05131e;
   color: white;
   font-size: 1.3em;
   padding: 8px 15px 5px 10px;
   border-radius: 6px;
   cursor: pointer;
-	@media (min-width: 800px) {
-		position: absolute;
-		top: 1.25em;
-		right: 1.5em;
-	}
+	white-space: nowrap;
 }
 
 .themeSwitchText {
@@ -189,13 +195,13 @@ header {
   margin: 0;
 }
 
-li, ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 a, a:visited, a:active {
   text-decoration: none;
+}
+
+hr {
+	border: 0;
+	margin-bottom: 2.5em;
+	background: transparent;
 }
 </style>

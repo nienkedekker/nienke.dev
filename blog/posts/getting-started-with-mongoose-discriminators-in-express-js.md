@@ -98,7 +98,7 @@ TV Show:
 	season: { type: Number, required: true }
 ```
 
-So how are we going to give our child schemas (Book, Movie, Tvshow) the _Base_ options? In other words, how will we extend our _Base_? Enter [discriminators](http://mongoosejs.com/docs/discriminators.html). A discriminator is a function for _model_ that _returns a model whose schema is the union of the base schema and the discriminator schema._ So basically, a discriminator will allow us to specify a key, like _kind_ or _itemtype_. With this key, we can store different entities (books, movies, tv shows..) in one collection, and we'll still be able to discriminate (*badum tsss*) between these entities.
+So how are we going to give our child schemas (Book, Movie, Tvshow) the _Base_ options? In other words, how will we extend our _Base_? Enter [discriminators](http://mongoosejs.com/docs/discriminators.html). A discriminator is a function for model that "returns a model whose schema is the union of the base schema and the discriminator schema." So basically, a discriminator will allow us to specify a key, like _kind_ or _itemtype_. With this key, we can store different entities (books, movies, tv shows..) in one collection, and we'll still be able to discriminate (badum tsss) between these entities.
 
 So let's set up our Base schema. Again, that's the structure that our other schemas will extend from.
 ```

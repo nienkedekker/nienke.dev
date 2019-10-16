@@ -6,7 +6,6 @@
 <script></script>
 <style lang="scss" scoped>
 	footer {
-		padding: 2em;
-		background: green;
+		padding: 2em 0;
 	}
 </style>

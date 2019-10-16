@@ -31,7 +31,7 @@ export default {
 .introHeader {
 	font-size: 3em;
 	font-weight: 400;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Inter', sans-serif;
 }
 
 .introParagraph {
