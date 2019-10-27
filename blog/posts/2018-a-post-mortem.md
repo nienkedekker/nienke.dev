@@ -23,7 +23,7 @@ It's been over a year since I wrote 2017: A Post Mortem, and a lot has happened!
 * I didn't contribute to any open source projects, even though that was my goal last year.
 * I didn't write more blog posts (another goal from last year).
 
-![](/talk.jpeg)
+![](/images/talk.jpeg)
 _Sketch notes for the talk I gave at role=drinks, made by  [Stephanie](https://stephanie.lol/)!_
 
 ## On quitting a job less than six months in
@@ -48,26 +48,26 @@ I have some goals for 2019, and they're largely the same as last year's: write g
 
 ## Some photos
 
-![](/portugal.jpeg)
+![](/images/portugal.jpeg)
 Portugal, September/October
 
-![](/fronteers.jpeg) 
+![](/images/fronteers.jpeg) 
 Fronteers, October
 
-![](/romania.jpeg) 
+![](/images/romania.jpeg) 
 Romania, April
 
-![](/glasgow.jpeg)
+![](/images/glasgow.jpeg)
 Glasgow, May
 
-![](/whw.jpeg) 
+![](/images/whw.jpeg) 
 WHW, May
 
-![](/lochness.jpeg) 
+![](/images/lochness.jpeg) 
 Loch Ness, May
 
-![](/whw2.jpeg) 
+![](/images/whw2.jpeg) 
 WHW, May
 
-![](/nienkemeem.jpeg)
+![](/images/nienkemeem.jpeg)
 It me

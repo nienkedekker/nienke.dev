@@ -6,7 +6,7 @@ Single blog post
     <section class="blogPost">
       <div class="blogPostWrapper">
         <p class="date">
-          "{{ title }}" was published on {{ date }}
+          "{{ title }}" was published on <time :datetime="dateISO">{{ date }}</time>
         </p>
         <hr>
         <span v-html="html" />
@@ -32,6 +32,7 @@ export default {
       name: params.blogpost,
       title: attr.title,
       date: attr.date,
+      dateISO: attr.dateISO,
       id: attr.id,
       description: attr.description,
       body: fileContent.body,
@@ -40,7 +41,16 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: `Nienke Dekker - ${this.title}`,
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { name: 'author', content: 'Nienke Dekker' },
+        { name: 'description', property: 'og:description', content: this.description, hid: 'description' },
+        { property: 'og:title', content: this.title },
+        { name: 'twitter:description', content: this.description },
+      ],
     };
   },
 };

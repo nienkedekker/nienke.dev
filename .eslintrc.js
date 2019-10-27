@@ -24,6 +24,7 @@ module.exports = {
       'closeBracket': 0,
       'alignAttributesVertically': true,
     }],
+	  'object-curly-newline': 0,
     'no-cond-assign': 'off',
     'indent': 'off',
     'max-len': 0,

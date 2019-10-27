@@ -44,14 +44,13 @@
 	}
 
 	.navigationList {
-		list-style-type: circle;
+		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 
 	.navigationListItem {
-		margin: 0;
+		display: inline-block;
 		padding: 0;
-		display: inline;
 	}
 </style>

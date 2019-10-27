@@ -1,12 +1,12 @@
 <template>
-  <div class="index">
+  <section class="index">
     <div class="indexWrapper">
       <intro />
       <blog-posts :blogs="blogs" />
       <contact />
       <other />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

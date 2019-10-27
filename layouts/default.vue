@@ -3,13 +3,13 @@
     <header>
       <no-ssr>
         <music />
+        <button
+          class="themeSwitch"
+          @click="switchTheme"
+        >
+          {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
+        </button>
       </no-ssr>
-      <button
-        class="themeSwitch"
-        @click="switchTheme"
-      >
-        {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
-      </button>
     </header>
     <nuxt />
   </main>
@@ -24,7 +24,7 @@ export default {
     }),
   computed: {
     getCorrectEmoji() {
-      return this.theme === 'light' ? '🌒' : '🌔';
+      return this.theme === 'light' ? '🌒' : '☀️';
     },
     getButtonText() {
       return this.theme === 'light' ? 'switch theme' : 'switch theme';
