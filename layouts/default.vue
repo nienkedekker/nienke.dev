@@ -1,7 +1,7 @@
 <template>
   <main :class="theme">
-    <header>
-      <no-ssr>
+    <no-ssr>
+      <header>
         <music />
         <button
           class="themeSwitch"
@@ -9,19 +9,23 @@
         >
           {{ getCorrectEmoji }} <span class="themeSwitchText"> {{ getButtonText }} </span>
         </button>
-      </no-ssr>
-    </header>
+      </header>
+    </no-ssr>
     <nuxt />
   </main>
 </template>
 <script>
-	import Music from '../components/Music';
+import NoSSR from 'vue-no-ssr';
+import Music from '../components/Music.vue';
 
 export default {
-  components: { Music },
+  components: {
+		Music,
+		'no-ssr': NoSSR,
+	},
   data: () => ({
-      theme: 'dark',
-    }),
+		theme: 'dark',
+	}),
   computed: {
     getCorrectEmoji() {
       return this.theme === 'light' ? '🌒' : '☀️';

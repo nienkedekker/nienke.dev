@@ -1,4 +1,4 @@
-Single blog post
+<!--Single blog post-->
 
 <template>
   <div class="blogPostContainer">
@@ -25,6 +25,11 @@ export default {
     BlogHeader,
     BlogFooter,
   },
+	data() {
+		return {
+			dateISO: '',
+		};
+	},
   async asyncData({ params }) {
     const fileContent = await import(`~/blog/posts/${params.blogpost}.md`);
     const attr = fileContent.attributes;

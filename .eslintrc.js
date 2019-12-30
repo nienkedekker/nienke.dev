@@ -10,6 +10,7 @@ module.exports = {
     'plugin:vue/recommended',
   ],
   rules: {
+	  "template-curly-spacing" : "off",
   	'no-param-reassign': 0,
     'import/no-unresolved': 0,
 	  'no-nested-ternary': 0,
