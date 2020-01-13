@@ -26,9 +26,12 @@ export default {
 }
 
 .label {
-  font-size: .75em;
+  font-size: .8em;
   padding: 5px 5px 5px 10px;
+	margin-left: 2px;
   border-radius: 10px;
+	background: black;
+	color: white;
 }
 
 a, a:link, a:visited {

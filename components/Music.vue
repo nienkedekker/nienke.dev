@@ -99,9 +99,9 @@ a, a:visited, a:active {
 	margin-bottom: 1em;
 	font-family: 'Fira Mono', monospace;
 	text-transform: uppercase;
-	font-size: .75em;
+	font-size: .8em;
 	letter-spacing: 1px;
-	font-weight: normal;
+	font-weight: 500;
 }
 
 .svg {

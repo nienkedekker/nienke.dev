@@ -26,12 +26,12 @@ export default {
 <style lang="scss" scoped>
 .intro {
   grid-area: intro;
+	font-family: 'Inter', sans-serif;
 }
 
 .introHeader {
 	font-size: 3em;
 	font-weight: 400;
-	font-family: 'Inter', sans-serif;
 }
 
 .introParagraph {
@@ -40,10 +40,9 @@ export default {
 }
 
 .introParagraphSmall {
-	font-size: .9em;
+	font-size: 1em;
 	line-height: 2;
-	opacity: 0.8;
 	padding: 1em 0;
-	max-width: 500px;
+	max-width: 800px;
 }
 </style>

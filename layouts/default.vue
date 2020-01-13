@@ -1,5 +1,8 @@
 <template>
-  <main :class="theme">
+  <main
+    :class="theme"
+    class="main"
+  >
     <no-ssr>
       <header>
         <music />
@@ -20,12 +23,12 @@ import Music from '../components/Music.vue';
 
 export default {
   components: {
-		Music,
-		'no-ssr': NoSSR,
-	},
+    Music,
+    'no-ssr': NoSSR,
+  },
   data: () => ({
-		theme: 'dark',
-	}),
+    theme: 'dark',
+  }),
   computed: {
     getCorrectEmoji() {
       return this.theme === 'light' ? '🌒' : '☀️';
@@ -70,42 +73,49 @@ body, html {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5;
-  background: black;
 
-	.sectionTitle {
-		margin-bottom: 1em;
-		font-family: 'Fira Mono', monospace;
-		text-transform: uppercase;
-		font-size: .75em;
-		letter-spacing: 1px;
-		font-weight: normal;
+	.main {
+		min-height: 100vh;
 	}
 
-	.listItem {
-		margin: 5px 0 0 0;
-		line-height: 2;
-		font-size: .8em;
-	}
+  .sectionTitle {
+    margin-bottom: 1em;
+    font-family: 'Fira Mono', monospace;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+
+  .listItem {
+    margin: 5px 0 0 0;
+    line-height: 2;
+		font-size: .9em;
+  }
 
   .light {
     background-color: $light_bg-color;
     color: $light_font-color;
 
-		hr {
-			border-bottom: 1px dashed $light_font-color;
+    hr {
+      border-bottom: 1px dashed $light_font-color;
+    }
+
+		header {
+			border-bottom: 1px solid $light_header-border;
 		}
 
 		.sectionTitle {
-			color: $light_title-color;
-		}
+      color: $light_title-color;
+    }
 
-		.blogDate {
-			color: $light_item-date;
-		}
+    .blogDate {
+      color: $light_item-date;
+    }
 
-		.blogItem {
-			border-bottom: 1px solid $light-item-border-bottom;
-		}
+    .blogItem {
+      border-bottom: 1px solid $light-item-border-bottom;
+    }
 
     a, a:visited, a:active {
       color: $light_link-color;
@@ -121,52 +131,55 @@ body, html {
     background-color: $dark_bg-color;
     color: $dark_font-color;
 
-		hr {
-			border-bottom: 1px dashed $dark_font-color;
+		header {
+			border-bottom: 1px solid $dark_header-border;
 		}
 
-		.sectionTitle {
-			color: $dark_title-color;
-		}
+    hr {
+      border-bottom: 1px dashed $dark_font-color;
+    }
 
-		.blogItem {
-			border-bottom: 1px solid $dark-item-border-bottom;
-		}
+    .sectionTitle {
+      color: $dark_title-color;
+    }
 
-		.blogDate {
-			color: $dark_item-date;
-		}
+    .blogItem {
+      border-bottom: 1px solid $dark-item-border-bottom;
+    }
+
+    .blogDate {
+      color: $dark_item-date;
+    }
 
     a, a:visited, a:active {
       color: $dark_link-color;
       background-color: $dark_link-color-bg;
-			text-decoration: none;
-			background-image: linear-gradient(currentColor, currentColor);
-			background-position: 0 100%;
-			background-repeat: no-repeat;
-			background-size: 0 1px;
-			transition: background-size cubic-bezier(0,.25,.5,1) 0.4s;
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 0 1px;
+      transition: background-size cubic-bezier(0,.25,.5,1) 0.4s;
     }
 
     a:hover {
       color: $dark_link-color-hover;
-			text-decoration: none;
-			background-size: 100% 1px;
-		}
+      text-decoration: none;
+      background-size: 100% 1px;
+    }
   }
 }
 
 header {
-	padding: 2em 2.5em;
-	min-height: 100px;
-	align-items: center;
-	justify-content: space-between;
-	border-bottom: 1px solid #5a5697;
-	display: flex;
-	@media (min-width: 1100px) {
-		padding: 2em 5em 2em 5em;
-		justify-content: space-between;
-	}
+  padding: 2em 2.5em;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  @media (min-width: 1100px) {
+    padding: 2em 5em 2em 5em;
+    justify-content: space-between;
+  }
 }
 
 .themeSwitch {
@@ -178,7 +191,7 @@ header {
   padding: 8px 15px 5px 10px;
   border-radius: 6px;
   cursor: pointer;
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .themeSwitchText {
@@ -186,10 +199,10 @@ header {
   padding-left: 5px;
   margin-top: 4px;
   vertical-align: text-top;
-	display: none;
-	@media (min-width: 600px) {
-		display: inline-block;
-	}
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
 }
 
 *,
@@ -204,8 +217,8 @@ a, a:visited, a:active {
 }
 
 hr {
-	border: 0;
-	margin-bottom: 2.5em;
-	background: transparent;
+  border: 0;
+  margin-bottom: 2.5em;
+  background: transparent;
 }
 </style>
