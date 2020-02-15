@@ -8,7 +8,7 @@ description: |
   I shared my salary information on Twitter. Why?
 ---
 
-Earlier today I shared my yearly salary [on Twitter](https://twitter.com/helenasometimes/status/1228479187238957059). It was in response to [this tweet](https://twitter.com/ZacSweers/status/1228205724255154177) by a US-based software engineer. I've had people ask me why I'd willingly share this information, which is a fair question. The answer to that is hard to break down in 280 characters, so I decided to resurrect this blog for a minute and post about my motivations.
+Earlier today I shared my yearly salary [on Twitter](https://twitter.com/helenasometimes/status/1228479187238957059). It was in response to [this tweet](https://twitter.com/ZacSweers/status/1228205724255154177) by a US-based software engineer. I've had people ask me why I'd willingly share this information, which is a fair question. The answer to that is hard to break down in 280 characters, so I decided to resurrect this blog for a minute and post about my motivations. (A sidenote: this blog has been in a state of construction for months, and things are probably wonky)
 
 Up until recently, I would hold back sharing details about my salary. I'd disclose this information to close friends, but not to co-workers and I'd never even consider throwing it just out there, for all of Twitter to see. I've been a frontend/software developer for three years now and I've always kept by the adage that compensation info is something that's no one's business but my own. After all, it could affect future job offers - companies are more liable to lowball me knowing I don't make as much as others, and am therefore more likely to accept a lower offer.
 
