@@ -64,13 +64,14 @@ export default {
 <style lang="scss">
 
 .blogPostContainer {
-	padding: 2em 2.5em;
+	padding: 2em;
 }
 
 .blogPost {
   max-width: 640px;
   margin: 0 auto;
-	font-size: .9em;
+	font-size: 1em;
+	font-weight: 400;
 }
 
 .blogPostWrapper {

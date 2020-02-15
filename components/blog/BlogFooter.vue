@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <a href="/">Designed & built by Nienke Dekker</a>
+    <a href="https://nienke.dev">Go to homepage</a>
   </footer>
 </template>
 <script></script>
