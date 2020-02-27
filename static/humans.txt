@@ -21,8 +21,7 @@
 Site made by Nienke Dekker
 
 (A selection of) Open Source Technologies used:
-Nuxt (https://gulpjs.com/)
-SVGOMG (https://jakearchibald.github.io/svgomg/)
+Nuxt (https://nuxtjs.org/)
 
 Special thanks to:
 Nuxt Markdown Blog Starter repo (https://github.com/marinaaisa/nuxt-markdown-blog-starter)
