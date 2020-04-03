@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1>#staythefuckhome (and read books)</h1>
-    <p>if possible, support your local book stores by buying books there</p>
+    <p>👉 support your local book store if it's safe</p>
     <nav>
       <button @click="category=''">
         all
@@ -69,6 +69,7 @@ export default {
 <style scoped lang="scss">
   main {
     margin: 2em auto 4em auto;
+    padding: 1em;
     font-weight: 400;
     color: #26183c;
     max-width: 800px;
