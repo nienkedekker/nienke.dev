@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1>#staythefuckhome (and read books)</h1>
-    <p>👉 support your local book store if it's safe</p>
+    <p>👉 support your local book stores (if it's safe to do so)</p>
     <nav>
       <button @click="category=''">
         all
@@ -13,29 +13,34 @@
         {{ cat }}
       </button>
     </nav>
-    <h2>Total: {{ filteredLength }}</h2>
-    <ul>
-      <li
-        v-for="book in filtered"
-        :key="book.id"
-        class="book"
-      >
-        <p>{{ book.author }} - <i>{{ book.title }}</i></p>
-        <p class="bookDescription">
-          {{ book.description }}
-        </p>
-        <p>
-          <a :href="book.link" class="link">Goodreads</a>
-        </p>
-      </li>
-    </ul>
+    <section>
+      <h2>Total: {{ filteredLength }}</h2>
+      <ul>
+        <li
+          v-for="book in filtered"
+          :key="book.id"
+          class="book"
+        >
+          <p>{{ book.author }} - <i>{{ book.title }}</i></p>
+          <p class="bookDescription">
+            {{ book.description }}
+          </p>
+          <p>
+            <a
+              :href="book.link"
+              class="link"
+            >Goodreads</a>
+          </p>
+        </li>
+      </ul>
+    </section>
   </main>
 </template>
 <script>
 const getBooks = () => import('~/static/books.json').then((books) => books.default || books);
 
 export default {
-  layout: 'recs',
+  layout: 'books',
   data() {
     return {
       category: '',
@@ -71,6 +76,7 @@ export default {
     margin: 2em auto 4em auto;
     padding: 1em;
     font-weight: 400;
+    font-size: 1.1em;
     color: #26183c;
     max-width: 800px;
   }
@@ -85,18 +91,19 @@ export default {
   nav {
     margin: 1em 0 1em 0;
   }
+
   .book {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   button {
     border: 0;
-    padding: .5em 1em;
-    border-radius: 10px;
+    padding: .5em 1.2em;
+    border-radius: 30px;
     cursor: pointer;
-    margin: 0 1em 0 0;
+    margin: .6em 1em 0 0;
     background: rgba(116, 88, 196, 0.15);
-    font-size: .65em;
+    font-size: .75em;
     color: #26183c;
 
     &:hover {
@@ -105,13 +112,13 @@ export default {
   }
 
   .bookDescription {
-    font-size: .75em;
+    font-size: .9em;
     line-height: 1.5;
     color: #6c6a86;
   }
 
   .link {
-    font-size: .65em;
+    font-size: .75em;
     vertical-align: text-top;
     line-height: 1;
     color: #756c95;

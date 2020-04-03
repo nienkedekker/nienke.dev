@@ -7,7 +7,7 @@
 
 body, html {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-size: 1.125rem;
+  font-size: 100%;
   line-height: 1.5;
 }
 
@@ -20,8 +20,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
-  margin: 2rem 0 1rem 0;
+  font-size: 1.2em;
+  margin: 2em 0 1em 0;
   font-weight: 300;
   color: #756c95;
 }
@@ -40,11 +40,5 @@ h3 {
 
 a, a:visited, a:active {
   text-decoration: none;
-}
-
-hr {
-  border: 0;
-  margin-bottom: 2.5em;
-  background: transparent;
 }
 </style>
