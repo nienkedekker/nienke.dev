@@ -2,7 +2,7 @@
   <section class="index">
     <div class="indexWrapper">
       <intro />
-      <blog-posts :blogs="blogs" />
+      <!--      <blog-posts :blogs="blogs" />-->
       <contact />
       <other />
     </div>
@@ -29,6 +29,7 @@ export default {
 				};
 		},
 };
+// Disable blog posts for now
 	// async asyncData() {
 	// // Sort blog posts by their ISO dates, from newest to oldest
 	// 	async function sortDates(response) {

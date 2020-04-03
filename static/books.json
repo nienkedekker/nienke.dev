@@ -1,0 +1,335 @@
+{
+  "books": {
+    "categories": ["non-fiction", "fiction", "series", "sci-fi", "horror", "fantasy", "historical fiction"],
+    "items": [
+      {
+        "id": 1,
+        "title": "Prep",
+        "author": "Curtis Sittenfeld",
+        "description": "An insightful, achingly funny coming-of-age story as well as a brilliant dissection of class, race, and gender in a hothouse of adolescent angst and ambition.",
+        "link": "https://www.goodreads.com/book/show/9844.Prep",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 2,
+        "title": "In the Miso Soup",
+        "author": "Ryu Murakami",
+        "description": " In the Miso Soup tells of Frank, an overweight American tourist who has hired Kenji to take him on a guided tour of Tokyo’s sleazy nightlife. But Frank’s behavior is so strange that Kenji begins to entertain a horrible suspicion—that his new client is in fact the serial killer currently terrorizing the city.",
+        "link": "https://www.goodreads.com/book/show/17810.In_the_Miso_Soup",
+        "tags": ["horror", "fiction" ]
+      },
+      {
+        "id": 3,
+        "title": "Sharp Teeth",
+        "author": "Toby Barlow",
+        "description": "Capturing the pace and feel of a graphic novel, this spellbinding debut blends dark humor and epic themes with card-playing dogs, crystal meth labs, surfing, and carne asada tacos.",
+        "link": "https://www.goodreads.com/book/show/1724365.Sharp_Teeth",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 4,
+        "title": "The Thousand Autumns of Jacob de Zoet",
+        "author": "David Mitchell",
+        "description": "This book is a straight-up, linear, third-person historical novel, an achingly romantic story of forbidden love and something of a rescue tale — all taking place off the coast of Japan, circa 1799.",
+        "link": "https://www.goodreads.com/book/show/7141642-the-thousand-autumns-of-jacob-de-zoet",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 5,
+        "title": "Submarine",
+        "author": "Joe Dunthorne",
+        "description": "At once a self-styled social scientist, a spy in the baffling adult world, and a budding, hormone-driven emotional explorer, Oliver Tate is stealthily nosing his way forward through the murky and uniquely perilous waters of adolescence.",
+        "link": "https://www.goodreads.com/book/show/2473454.Submarine",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 6,
+        "title": "The Luminaries",
+        "author": "Eleanor Catton",
+        "description": "Every sentence of this intriguing tale set on the wild west coast of southern New Zealand during the time of its goldrush is expertly written, every cliffhanger chapter-ending making us beg for the next to begin. The Luminaries has been perfectly constructed as the consummate literary page-turner.",
+        "link": "https://www.goodreads.com/book/show/17333230-the-luminaries",
+        "tags": ["historical fiction", "fiction"]
+      },
+      {
+        "id": 7,
+        "title": "The Leftovers",
+        "author": "Tom Perrotta",
+        "description": "What if — whoosh, right now, with no explanation — a number of us simply vanished? Would some of us collapse? Would others of us go on, one foot in front of the other, as we did before the world turned upside down?",
+        "link": "https://www.goodreads.com/book/show/10762469-the-leftovers",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 8,
+        "title": "The Art of Fielding",
+        "author": "Chad Harbach",
+        "description": "At Westish College, a small school on the shore of Lake Michigan, baseball star Henry Skrimshander seems destined for big league stardom. But when a routine throw goes disastrously off course, the fates of five people are upended.",
+        "link": "https://www.goodreads.com/book/show/10996342-the-art-of-fielding",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 9,
+        "title": "A Place of Greater Safety",
+        "author": "Hilary Mantel",
+        "description": "Capturing the violence, tragedy, history, and drama of the French Revolution, this novel focuses on the families and loves of three men who led the Revolution--Danton, the charismatic leader and orator; Robespierre, the cold rationalist; and Desmoulins, the rabble-rouser.",
+        "link": "https://www.goodreads.com/book/show/101921.A_Place_of_Greater_Safety",
+        "tags": ["historial fiction", "fiction"]
+      },
+      {
+        "id": 10,
+        "title": "Stoner",
+        "author": "John Williams",
+        "description": "William Stoner is born at the end of the nineteenth century into a dirt-poor Missouri farming family. Sent to the state university to study agronomy, he instead falls in love with English literature and embraces a scholar’s life, so different from the hardscrabble existence he has known.",
+        "link": "https://www.goodreads.com/book/show/166997.Stoner",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 11,
+        "title": "The Immortalists",
+        "author": "Chloe Benjamin",
+        "description": "If you knew the date of your death, how would you live your life?",
+        "link": "https://www.goodreads.com/book/show/30288282-the-immortalists",
+        "tags": ["fiction", "fantasy"]
+      },
+      {
+        "id": 12,
+        "title": "The Vegetarian",
+        "author": "Han Kang",
+        "description": "Before the nightmare, Yeong-hye and her husband lived an ordinary life. But when splintering, blood-soaked images start haunting her thoughts, Yeong-hye decides to purge her mind and renounce eating meat.",
+        "link": "https://www.goodreads.com/book/show/25489025-the-vegetarian",
+        "tags": ["fiction", "horror"]
+      },
+      {
+        "id": 13,
+        "title": "Circe",
+        "author": "Madeline Miller",
+        "description": "With unforgettably vivid characters, mesmerizing language, and page-turning suspense, Circe is a triumph of storytelling, an intoxicating epic of family rivalry, palace intrigue, love and loss, as well as a celebration of indomitable female strength in a man's world.",
+        "link": "https://www.goodreads.com/book/show/35959740-circe",
+        "tags": ["fiction", "historical fiction"]
+      },
+      {
+        "id": 14,
+        "title": "Severance",
+        "author": "Ling Ma",
+        "description": "An offbeat office novel turns apocalyptic satire as a young woman transforms from orphan to worker bee to survivor.",
+        "link": "https://www.goodreads.com/book/show/36348525-severance",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 15,
+        "title": "The Overstory",
+        "author": "Richard Powers",
+        "description": "The Overstory is a sweeping, impassioned work of activism and resistance that is also a stunning evocation of - and paean to - the natural world.",
+        "link": "https://www.goodreads.com/book/show/40180098-the-overstory",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 16,
+        "title": "The River",
+        "author": "Peter Heller",
+        "description": "The story of two college students on a wilderness canoe trip--a gripping tale of a friendship tested by fire, white water, and violence.",
+        "link": "https://www.goodreads.com/book/show/40216324-the-river",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 17,
+        "title": "Kill [redacted]",
+        "author": "Anthony Good",
+        "description": "Waltzing through the darkling journal of a brilliant mind put to serious misuse, Kill [redacted] is a powerful and provocative exploration of the contours of grief and the limits of moral justice, and a blazing condemnation of all those who hold, and abuse, power.",
+        "link": "https://www.goodreads.com/book/show/40964543-kill-redacted",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 18,
+        "title": "Doxology",
+        "author": "Nell Zink",
+        "description": "Following an exceptional family with roots in New York, the Midwest, and D.C., Doxology is a story about the possibilities of friendship, the way life strays from our expectations over the course of time, and the fraught yet enduring ties that bind.",
+        "link": "https://www.goodreads.com/book/show/41088575-doxology",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 19,
+        "title": "House of Leaves",
+        "author": "Mark Z. Danielewski",
+        "description": "Years ago, when House of Leaves was first being passed around, it was nothing more than a badly bundled heap of paper, parts of which would occasionally surface on the Internet. No one could have anticipated the small but devoted following this terrifying story would soon command.",
+        "link": "https://www.goodreads.com/book/show/24800.House_of_Leaves",
+        "tags": ["fiction", "horror"]
+      },
+      {
+        "id": 20,
+        "title": "Spoonbenders",
+        "author": "Daryl Gregory",
+        "description": "A generations-spanning family of psychics - both blessed and burdened by their abilities - must use their powers to save themselves from the CIA, the local mafia, and a skeptic hell-bent on discrediting them in this hilarious, tender, magical novel about the invisible forces that bind us.",
+        "link": "https://www.goodreads.com/book/show/32827398-spoonbenders",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 21,
+        "title": "The Oracle Year",
+        "author": "Charles Soule",
+        "description": "Knowledge is power. So when an unassuming Manhattan bassist named Will Dando awakens from a dream one morning with 108 predictions about the future in his head, he rapidly finds himself the most powerful man in the world.",
+        "link": "https://www.goodreads.com/book/show/40733836-the-oracle-year",
+        "tags": ["fiction", "sci-fi"]
+      },
+      {
+        "id": 22,
+        "title": "The Infinite Future",
+        "author": "Tim Wirkus",
+        "description": "An exhilarating, original novel, set in Brazil, Idaho, and outer space, about an obsessive librarian, a down-at-heel author, and a disgraced historian who go on the hunt for a mystical, life-changing book--and find it.",
+        "link": "https://www.goodreads.com/book/show/34720060-the-infinite-future",
+        "tags": ["fiction", "sci-fi"]
+      },
+      {
+        "id": 23,
+        "title": "The Gone World",
+        "author": "Tom Sweterlitsch",
+        "description": "Inception meets True Detective in this science fiction thriller of spellbinding tension and staggering scope that follows a special agent into a savage murder case with grave implications for the fate of mankind.",
+        "link": "https://www.goodreads.com/book/show/33413556-the-gone-world",
+        "tags": ["fiction", "horror", "scifi"]
+      },
+      {
+        "id": 24,
+        "title": "The Raven Tower ",
+        "author": "Ann Leckie",
+        "description": "A powerhouse epic of humans and gods at war, deeply imagined and profoundly thrilling. There are echoes of Shakespeare and Le Guin in The Raven Tower, but its strange dark brilliance could only have come from Ann Leckie.",
+        "link": "https://www.goodreads.com/book/show/39395857-the-raven-tower",
+        "tags": ["fiction", "fantasy"]
+      },
+      {
+        "id": 26,
+        "title": "The Priory of the Orange Tree",
+        "author": "Samantha Shannon",
+        "description": "A trailblazing, epic high fantasy about a world on the brink of war with dragons - and the women who must lead the fight to save it.",
+        "link": "https://www.goodreads.com/book/show/40275288-the-priory-of-the-orange-tree",
+        "tags": ["fiction", "fantasy"]
+      },
+      {
+        "id": 27,
+        "title": "Sixteen Ways to Defend a Walled City",
+        "author": "K.J. Parker",
+        "description": "This is the story of Orhan, son of Siyyah Doctus Felix Praeclarissimus, and his history of the Great Siege, written down so that the deeds and sufferings of great men may never be forgotten.",
+        "link": "https://www.goodreads.com/book/show/37946419-sixteen-ways-to-defend-a-walled-city",
+        "tags": ["fiction", "fantasy"]
+      },
+      {
+        "id": 28,
+        "title": "Boy Swallows Universe",
+        "author": "Trent Dalton",
+        "description": " A novel of love, crime, magic, fate and coming of age, set in Brisbane's violent working class suburban fringe - from one of Australia's most exciting new writers.",
+        "link": "https://www.goodreads.com/book/show/37558445-boy-swallows-universe",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 29,
+        "title": "Recursion",
+        "author": "Blake Crouch",
+        "description": "Blake Crouch's alternate-reality thriller, “Recursion,” explores identity, memory and the very things that make us human.",
+        "link": "https://www.goodreads.com/book/show/42046112-recursion",
+        "tags": ["fiction", "sci-fi"]
+      },
+      {
+        "id": 30,
+        "title": "The Windup Girl",
+        "author": "Paolo Bacigalupi",
+        "description": "What happens when calories become currency? What happens when bio-terrorism becomes a tool for corporate profits, when said bio-terrorism's genetic drift forces mankind to the cusp of post-human evolution?",
+        "link": "https://www.goodreads.com/book/show/6597651-the-windup-girl",
+        "tags": ["fiction", "sci-fi"]
+      },
+      {
+        "id": 31,
+        "title": "Famous Men Who Never Lived",
+        "author": "K. Chess",
+        "description": "With an eerie and ingenious premise, K. Chess explores in a fresh way the most universal of human experiences: loss, regret, and the longing for what might have been. With its refugees from a parallel universe, this inventive book does what only fiction can do: describes an impossible world in order to more clearly show us our own.",
+        "link": "https://www.goodreads.com/book/show/40611197-famous-men-who-never-lived",
+        "tags": ["fiction", "sci-fi"]
+      },
+      {
+        "id": 32,
+        "title": "Hyperion (Hyperion Cantos)",
+        "author": "Dan Simmons",
+        "description": "On the world called Hyperion, beyond the law of the Hegemony of Man, there waits the creature called the Shrike. There are those who worship it. There are those who fear it. And there are those who have vowed to destroy it.",
+        "link": "https://www.goodreads.com/book/show/77566.Hyperion",
+        "tags": ["series", "sci-fi", "fiction"]
+      },
+      {
+        "id": 33,
+        "title": "Annihilation (Southern Reach Trilogy)",
+        "author": "Jeff Vandermeer",
+        "description": "An expedition of four women is sent into an unknown region called Area X, beyond the borders of humanity: a psychologist, a surveyor, an anthropologist, and our narrator, a biologist. The purpose of the mission is to collect data about Area X and report back to the government, the Southern Reach, but circumstances begin to change when the group discovers a tower (or tunnel) that was previously unmarked on the map.",
+        "link": "https://www.goodreads.com/book/show/17934530-annihilation",
+        "tags": ["series", "sci-fi", "fiction"]
+      },
+      {
+        "id": 34,
+        "title": "Ilium (Ilium Series)",
+        "author": "Dan Simmons",
+        "description": "The Trojan War rages at the foot of Olympos Mons on Mars—observed and influenced from on high by Zeus and his immortal family—and twenty-first-century professor Thomas Hockenberry is there to play a role in the insidious private wars of vengeful gods and goddesses. ",
+        "link": "https://www.goodreads.com/book/show/3973.Ilium",
+        "tags": ["series", "sci-fi", "fiction"]
+      },
+      {
+        "id": 35,
+        "title": "The Magicians (The Magicians #1)",
+        "author": "Lev Grossman",
+        "description": "A thrilling and original coming-of-age novel for adults about a young man practicing magic in the real world.",
+        "link": "https://www.goodreads.com/book/show/6101718-the-magicians",
+        "tags": ["series", "fantasy", "fiction"]
+      },
+      {
+        "id": 36,
+        "title": "The Fifth Season (The Broken Earth #1)",
+        "author": "N.K. Jemisin",
+        "description": "At the end of the world, a woman must hide her secret power and find her kidnapped daughter in this Hugo Award winning novel of power, oppression, and revolution. ",
+        "link": "https://www.goodreads.com/book/show/19161852-the-fifth-season",
+        "tags": ["series", "fantasy", "fiction"]
+      },
+      {
+        "id": 37,
+        "title": "The Gunslinger (The Dark Tower series)",
+        "author": "Stephen King",
+        "description": "In the first book of this brilliant series, Stephen King introduces readers to one of his most enigmatic heroes, Roland of Gilead, The Last Gunslinger.",
+        "link": "https://www.goodreads.com/book/show/43615.The_Gunslinger",
+        "tags": ["series", "fantasy", "fiction"]
+      },
+      {
+        "id": 38,
+        "title": "Wolf Hall (Thomas Cromwell Trilogy #1)",
+        "author": "Hilary Mantel",
+        "description": "A novel both fresh and finely wrought: a brilliant portrait of a society in the throes of disorienting change, anchored by a penetrating character study of Henry's formidable advisor, Thomas Cromwell.",
+        "link": "https://www.goodreads.com/book/show/7826803-wolf-hall",
+        "tags": ["series", "historical fiction", "fiction"]
+      },
+      {
+        "id": 39,
+        "title": "Columbine",
+        "author": "Dave Cullen",
+        "description": "What really happened April 20, 1999? The horror left an indelible stamp on the American psyche, but most of what we \"know\" is wrong. It wasn't about jocks, Goths, or the Trench Coat Mafia.",
+        "link": "https://www.goodreads.com/book/show/5632446-columbine",
+        "tags": ["non-fiction"]
+      },
+      {
+        "id": 40,
+        "title": "Between the World and Me",
+        "author": "Ta-Nehisi Coates",
+        "description": "In a profound work that pivots from the biggest questions about American history and ideals to the most intimate concerns of a father for his son, Ta-Nehisi Coates offers a powerful new framework for understanding our nation’s history and current crisis.",
+        "link": "https://www.goodreads.com/book/show/25489625-between-the-world-and-me",
+        "tags": ["non-fiction"]
+      },
+      {
+        "id": 41,
+        "title": "An American Summer",
+        "author": "Alex Kotlowitz",
+        "description": "The numbers are staggering: over the past twenty years in Chicago, 14,033 people have been killed and another roughly 60,000 wounded by gunfire. What does that do to the spirit of individuals and community?",
+        "link": "https://www.goodreads.com/book/show/40588301-an-american-summer",
+        "tags": ["non-fiction"]
+      },
+      {
+        "id": 42,
+        "title": "Generation Kill",
+        "author": "Evan Wright",
+        "description": "Nuanced and grounded in details often overlooked in daily journalistic accounts... A complex portrait of able young men raised on video games and trained as killers.",
+        "link": "https://www.goodreads.com/book/show/543103.Generation_Kill",
+        "tags": ["non-fiction"]
+      }
+    ]
+  }
+}
