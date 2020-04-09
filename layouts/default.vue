@@ -70,8 +70,7 @@ export default {
 body, html {
   font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 1rem;
+  font-size: 100%;
   line-height: 1.5;
 
 	.main {
