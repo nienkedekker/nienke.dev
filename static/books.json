@@ -329,6 +329,86 @@
         "description": "Nuanced and grounded in details often overlooked in daily journalistic accounts... A complex portrait of able young men raised on video games and trained as killers.",
         "link": "https://www.goodreads.com/book/show/543103.Generation_Kill",
         "tags": ["non-fiction"]
+      },
+      {
+        "id": 43,
+        "title": "Man Walks Into A Room",
+        "author": "Nicole Krauss",
+        "description": "Samson Greene, a young and popular professor at Columbia, is found wandering in the Nevada desert. When his wife, Anna, comes to bring him home, she finds a man who remembers nothing, not even his own name. The removal of a small brain tumor saves his life, but his memories beyond the age of twelve are permanently lost.",
+        "link": "https://www.goodreads.com/book/show/44380.Man_Walks_Into_a_Room",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 44,
+        "title": "Northern Lights (His Dark Materials #1)",
+        "author": "Philip Pullman",
+        "description": "Lyra Belacqua and her animal daemon live half-wild and carefree among scholars of Jordan College, Oxford. The destiny that awaits her will take her to the frozen lands of the Arctic, where witch-clans reign and ice-bears fight. Her extraordinary journey will have immeasurable consequences far beyond her own world...",
+        "link": "https://www.goodreads.com/zh/book/show/24937342-northern-lights",
+        "tags": ["fantasy", "fiction", "series"]
+      },
+      {
+        "id": 45,
+        "title": "Let the Right One In",
+        "author": "John Ajvide Lindqvist",
+        "description": "John Ajvide Lindqvist's novel is a unique and brilliant fusion of social novel and vampire legend, a deeply moving fable about rejection, friendship and loyalty.",
+        "link": "https://www.goodreads.com/book/show/943402.Let_the_Right_One_In",
+        "tags": ["fiction", "horror"]
+      },
+      {
+        "id": 46,
+        "title": "Siddharta ",
+        "author": "Hermann Hesse",
+        "description": "Though set in a place and time far removed from the Germany of 1922, the year of the book’s debut, the novel is infused with the sensibilities of Hermann Hesse’s time, synthesizing disparate philosophies–Eastern religions, Jungian archetypes, Western individualism–into a unique vision of life as expressed through one man’s search for meaning.",
+        "link": "https://www.goodreads.com/book/show/52036.Siddhartha",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 47,
+        "title": "Middlesex ",
+        "author": "Jeffrey Eugenides",
+        "description": "Middlesex tells the breathtaking story of Calliope Stephanides, and three generations of the Greek-American Stephanides family, who travel from a tiny village overlooking Mount Olympus in Asia Minor to Prohibition-era Detroit, witnessing its glory days as the Motor City and the race riots of 1967 before moving out to the tree-lined streets of suburban Grosse Pointe, Michigan. To understand why Calliope is not like other girls, she has to uncover a guilty family secret, and the astonishing genetic history that turns Callie into Cal, one of the most audacious and wondrous narrators in contemporary fiction.",
+        "link": "https://www.goodreads.com/book/show/2187.Middlesex",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 48,
+        "title": "Norwegian Wood ",
+        "author": "Haruki Murakami",
+        "description": "A magnificent blending of the music, the mood, and the ethos that was the sixties with the story of one college student's romantic coming of age, Norwegian Wood brilliantly recaptures a young man's first, hopeless, and heroic love.",
+        "link": "https://www.goodreads.com/book/show/11297.Norwegian_Wood",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 49,
+        "title": "Never Let Me Go ",
+        "author": "Kazuo Ishigo",
+        "description": "From the winner of the Nobel Prize in Literature and author of the Booker Prize–winning novel The Remains of the Day comes a devastating novel of innocence, knowledge, and loss.",
+        "link": "https://www.goodreads.com/book/show/6334.Never_Let_Me_Go",
+        "tags": ["fiction", "scifi"]
+      },
+      {
+        "id": 50,
+        "title": "Out Stealing Horses",
+        "author": "Per Petterson",
+        "description": "We were going out stealing horses. That was what he said, standing at the door to the cabin where I was spending the summer with my father. I was fifteen. It was 1948 and one of the first days of July.",
+        "link": "https://www.goodreads.com/book/show/398323.Out_Stealing_Horses",
+        "tags": ["fiction"]
+      },
+      {
+        "id": 51,
+        "title": "The Blade Itself (The First Law #1)",
+        "author": "Joe Abercrombie",
+        "description": "Unpredictable, compelling, wickedly funny, and packed with unforgettable characters, The Blade Itself is noir fantasy with a real cutting edge.",
+        "link": "https://www.goodreads.com/book/show/944073.The_Blade_Itself",
+        "tags": ["fiction", "fantasy", "series"]
+      },
+      {
+        "id": 51,
+        "title": "Number9Dream",
+        "author": "David Mitchell",
+        "description": "In outward form, number9dream is a Dickensian coming-of-age journey: Young dreamer Eiji Miyake, from remote rural Japan, thrust out on his own by his sister’s death and his mother’s breakdown, comes to Tokyo in pursuit of the father who abandoned him.",
+        "link": "https://www.goodreads.com/book/show/6820.Number9Dream",
+        "tags": ["fiction", "fantasy"]
       }
     ]
   }
