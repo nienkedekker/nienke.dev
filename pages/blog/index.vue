@@ -4,7 +4,7 @@ List of blogs on the /blog page
   <div>
     <section class="blogIndex">
       <div class="blogIndexWrapper">
-        <h1>Blog</h1>
+        <h1>Blog (work in progress..)</h1>
         <ul
           v-for="blogItem in blogs"
           :key="blogItem.id"

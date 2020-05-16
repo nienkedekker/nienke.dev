@@ -64,109 +64,82 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '../assets/variables.scss';
 @import url('https://rsms.me/inter/inter.css');
-
 body, html {
   font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Fira Sans", sans-serif;
   display: block;
   font-size: 100%;
   line-height: 1.5;
+}
 
-	.main {
-		min-height: 100vh;
-	}
+.dark {
+  --text-color: #dbdbdb;
+  --background: #131829;
+  --section-title: #547984;
+  --header-line: #313d68;
+  --link: #78b1bf;
+  --link-bg: var(--background);
+  --link-hover: #fdcb9e;
+}
 
-  .sectionTitle {
-    margin-bottom: 1em;
-    font-family: 'Fira Mono', monospace;
-    text-transform: uppercase;
-    font-size: .9em;
-    letter-spacing: 1px;
-    font-weight: normal;
-  }
+.light {
+  --text-color: #594a4e;
+  --background: #faeee7;
+  --section-title: #29233e;
+  --header-line: #d1c7c1;
+  --link: #33272a;
+  --link-bg: #ffc6c7;
+  --link-hover: #ff8ba7;
+}
 
-  .listItem {
-    margin: 5px 0 0 0;
-    line-height: 2;
-		font-size: .9em;
-  }
+.main {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text-color);
+}
 
-  .light {
-    background-color: $light_bg-color;
-    color: $light_font-color;
+.sectionTitle {
+  margin-bottom: 1em;
+  font-family: 'Fira Mono', monospace;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
 
-    hr {
-      border-bottom: 1px dashed $light_font-color;
-    }
+.listItem {
+  margin: 5px 0 0 0;
+  line-height: 2;
+  font-size: .9em;
+}
 
-		header {
-			border-bottom: 1px solid $light_header-border;
-		}
+hr {
+  border-bottom: 1px dashed var(--hr-line);
+}
 
-		.sectionTitle {
-      color: $light_title-color;
-    }
+header {
+  border-bottom: 1px dashed var(--header-line);
+}
 
-    .blogDate {
-      color: $light_item-date;
-    }
+.sectionTitle {
+  color: var(--section-title);
+}
 
-    .blogItem {
-      border-bottom: 1px solid $light-item-border-bottom;
-    }
+.blogDate {
+  color: var(--blog-date);
+}
 
-    a, a:visited, a:active {
-      color: $light_link-color;
-      background-color: $light_link-color-bg;
-    }
+.blogItem {
+  border-bottom: 1px solid var(--blog-item-line);
+}
 
-    a:hover {
-      color: $light_link-color-hover;
-    }
-  }
+a, a:visited, a:active {
+  color: var(--link);
+  background-color: var(--link-bg);
+}
 
-  .dark {
-    background-color: $dark_bg-color;
-    color: $dark_font-color;
-
-		header {
-			border-bottom: 1px solid $dark_header-border;
-		}
-
-    hr {
-      border-bottom: 1px dashed $dark_font-color;
-    }
-
-    .sectionTitle {
-      color: $dark_title-color;
-    }
-
-    .blogItem {
-      border-bottom: 1px solid $dark-item-border-bottom;
-    }
-
-    .blogDate {
-      color: $dark_item-date;
-    }
-
-    a, a:visited, a:active {
-      color: $dark_link-color;
-      background-color: $dark_link-color-bg;
-      text-decoration: none;
-      background-image: linear-gradient(currentColor, currentColor);
-      background-position: 0 100%;
-      background-repeat: no-repeat;
-      background-size: 0 1px;
-      transition: background-size cubic-bezier(0,.25,.5,1) 0.4s;
-    }
-
-    a:hover {
-      color: $dark_link-color-hover;
-      text-decoration: none;
-      background-size: 100% 1px;
-    }
-  }
+a:hover {
+  color: var(--link-hover);
 }
 
 header {
@@ -184,7 +157,7 @@ header {
 .themeSwitch {
   border: 0;
   margin-left: 1em;
-  background-color: #05131e;
+  background-color: black;
   color: white;
   font-size: 1.3em;
   padding: 8px 15px 5px 10px;
