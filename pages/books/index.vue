@@ -41,6 +41,14 @@ const getBooks = () => import('~/static/books.json').then((books) => books.defau
 
 export default {
   layout: 'books',
+  async asyncData() {
+    const data = await getBooks();
+    return {
+      categories: data.books.categories,
+      books: data.books.items,
+      length: data.books.items.length,
+    };
+  },
   data() {
     return {
       category: '',
@@ -60,14 +68,6 @@ export default {
       }
       return this.filtered.length;
     },
-  },
-  async asyncData() {
-    const data = await getBooks();
-    return {
-      categories: data.books.categories,
-      books: data.books.items,
-      length: data.books.items.length,
-    };
   },
 };
 </script>

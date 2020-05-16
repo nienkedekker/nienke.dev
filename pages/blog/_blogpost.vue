@@ -25,11 +25,6 @@ export default {
     BlogHeader,
     BlogFooter,
   },
-	data() {
-		return {
-			dateISO: '',
-		};
-	},
   async asyncData({ params }) {
     const fileContent = await import(`~/blog/posts/${params.blogpost}.md`);
     const attr = fileContent.attributes;
@@ -44,6 +39,11 @@ export default {
       html: fileContent.html,
     };
   },
+	data() {
+		return {
+			dateISO: '',
+		};
+	},
   head() {
     return {
       title: `Nienke Dekker - ${this.title}`,
