@@ -75,7 +75,7 @@ body, html {
 .dark {
   --text-color: #dbdbdb;
   --background: #131829;
-  --section-title: #547984;
+  --section-title: #6996a3;
   --header-line: #313d68;
   --link: #78b1bf;
   --link-bg: var(--background);
