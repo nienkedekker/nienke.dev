@@ -11,8 +11,7 @@
       <a href="https://nos.nl">NOS</a>, focusing on creating clean and performant code.
     </p>
     <p class="introParagraphSmall">
-      Some technologies I've recently worked with are Vue, Node, TypeScript, and the JAMstack.
-      I'm also interested in domain driven design principles and patterns and how they can be applied to frontend software engineering.
+      Some technologies I've recently worked with are NextJS, Vue, and Node.
     </p>
   </section>
 </template>
