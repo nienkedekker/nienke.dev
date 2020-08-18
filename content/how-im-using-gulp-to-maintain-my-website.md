@@ -1,9 +1,6 @@
 ---
-name: 'how-im-using-gulp-to-maintain-my-website'
 title: How I'm using Gulp to maintain my website
-date: 24 September 2017
 dateISO: 2017-09-24
-id: 'how-im-using-gulp-to-maintain-my-website'
 description: |
   I use a single Gulpfile to automate website development. Here's how!
 ---
@@ -13,7 +10,7 @@ First things first: this is my very first blog post on my new personal site, and
 
 But anyway, after landing a job as junior frontend developer last year and joining the tech industry as said developer, I realized that I have things to say and to share on different media than social media. I'm hoping this blog will serve me as a repository for code snippets and tips, but also as a place for me to share how I feel about things such as being a self-taught coder, about being a woman in tech, about meet-ups I go to and organize, conferenced I attend, et cetera. The list is long, and I hope you're looking forward to sharing with me!
 
-A few quick notes: English is not my first language, so please excuse any mistakes. I'm also not enabling comments as of yet, but I probably will in the near future. And if you find any bugs, please let me know on [Twitter](https://twitter.com/helenasometimes)! 
+A few quick notes: English is not my first language, so please excuse any mistakes. I'm also not enabling comments as of yet, but I probably will in the near future. And if you find any bugs, please let me know on [Twitter](https://twitter.com/helenasometimes)!
 
 ## Swig, swill, gulp
 I freaking love static site generators. I've tried any under the sun: Middleman, Hugo, Hexo, Jekyll, Gatsby, Metalsmith, Octopress, Silex -- I love them! When the documentation's good, I can have a maintainable site up and running in a couple of hours. The thing that keeps me from sticking with one however, is the bloat. My current favorite SSG, Hugo, runs on Go, meaning that I will need to have Go installed locally. So, I'll also need Homebrew (which barely works for me half the time), and then I'll need to remember a bunch of commands and flags, and there's also a bunch of files on my computer that I'm not quite sure what they're doing exactly, but I know that if I'll remove them things stop working, so -- time to get in control and build something from scratch.
@@ -77,7 +74,7 @@ This could definitely be optimized, because I'm doing the same things twice: _gu
 
 ## Magical Gulp
 ### useref
-One of my absolute favorite Gulp packages is [useref](https://www.npmjs.com/package/gulp-useref). At some point, I was struggling with the following: when running _gulp dist_ my JS file is minified and renamed from _all.js_ to _all.min.js_. However, in my _index.html_, the path to JS is still the non-minified _all.js_ file. With the result that on deployment, my shiny minified JS file isn't loaded, because it wasn't called in my index file. Now, I could've changed this: 
+One of my absolute favorite Gulp packages is [useref](https://www.npmjs.com/package/gulp-useref). At some point, I was struggling with the following: when running _gulp dist_ my JS file is minified and renamed from _all.js_ to _all.min.js_. However, in my _index.html_, the path to JS is still the non-minified _all.js_ file. With the result that on deployment, my shiny minified JS file isn't loaded, because it wasn't called in my index file. Now, I could've changed this:
 
 `<script src="js/all.js" defer></script>`
 
@@ -108,7 +105,7 @@ gulp.task('build', function(callback) {
 });
 ```
 
-Gulp converts Less to CSS first, then does its autoprefixing and minifying task, and then moves the final files over to my _dist_ folder. 
+Gulp converts Less to CSS first, then does its autoprefixing and minifying task, and then moves the final files over to my _dist_ folder.
 
 ## Wrapping it up, and sharing discoveries as an inexperienced developer
 All in all, my entire Gulp file is 142 lines long. Once I get around to refactoring and optimizing it, I'm sure I can bring it down to below a 100 lines. It has 12 requirements in total, and again, I'm sure I could bring that number down with some optimization. The total build time is about two seconds, and deployment takes not even one second.

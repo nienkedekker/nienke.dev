@@ -8,18 +8,20 @@
     "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "yarn lint",
     "test": "jest",
-    "dev": "yarn generate:blogposts && nuxt",
-    "build": "yarn generate:blogposts && nuxt build",
-    "start": "yarn generate:blogposts && nuxt start",
-    "generate": "yarn generate:blogposts && nuxt generate",
-    "generate:blogposts": "node generatePosts.js"
+    "dev": "yarn generate:posts && nuxt",
+    "build": "yarn generate:posts && nuxt build",
+    "start": "yarn generate:posts && nuxt start",
+    "generate": "yarn generate:posts && nuxt generate",
+    "generate:posts": "node generatePosts.js"
   },
   "dependencies": {
+    "@nuxt/content": "^1.6.1",
     "@nuxtjs/axios": "^5.10.3",
     "directory-tree": "^2.2.4",
     "frontmatter-markdown-loader": "^3.4.3",
     "node-sass": "^4.14.1",
     "nuxt": "^2.12.2",
+    "prism-themes": "^1.4.0",
     "remove-markdown-extension": "^1.0.0",
     "sass-loader": "^8.0.2",
     "vue-no-ssr": "^1.1.1"

@@ -1,9 +1,6 @@
 ---
-name: 'my-favorite-tools-in-2017'
 title: My favorite tools of 2017
-date: 31 December 2017
 dateISO: 2017-12-31
-id: 'my-favorite-tools-in-2017'
 description: |
   A small collection of useful tools I gathered in 2017.
 ---
