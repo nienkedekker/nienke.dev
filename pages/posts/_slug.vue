@@ -1,6 +1,8 @@
 <template>
   <article>
-    <nuxt-content :document="article" class="blogPost"/>
+    <h1>{{ article.title }}</h1>
+    <time>{{ formattedDate(article.dateISO) }}</time>
+    <nuxt-content :document="article" />
   </article>
 </template>
 
@@ -11,37 +13,43 @@
       const article = await $content(params.slug).fetch()
 
       return { article }
+    },
+
+    methods: {
+      formattedDate(date) {
+        const newDate = new Date(date);
+        return newDate.toDateString()
+      }
     }
   }
 </script>
 
 <style lang="scss">
+
   article {
-    padding: 2em;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 3em 0;
+
+    h1 {
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    time {
+      text-transform: uppercase;
+    }
+
+    p, ul, ol {
+      line-height: 1.85;
+      margin: 1.5em 0;
+    }
+
+    code {
+      font-size: 1em;
+    }
   }
 
-  .blogPost {
-    max-width: 640px;
-    margin: 0 auto;
-    font-size: 1em;
-    font-weight: 400;
-  }
-  .blogPostWrapper {
-    line-height: 1.85em;
-    h1, h2, h3 {
-      font-weight: 400;
-      margin-bottom: .5em;
-      margin-top: 2em;
-      font-family: 'Inter', sans-serif;
-    }
-    p {
-      margin: 1em 0;
-    }
-  }
-  .date {
-    font-size: .85em;
-    margin-bottom: 2em;
-  }
   img {
     width: 100%;
   }

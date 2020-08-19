@@ -1,27 +1,25 @@
 <template>
   <section class="posts">
-    <h1>Blog (work in progress..)</h1>
     <ul
-      v-for="article in articles"
-      :key="article.id"
       class="list"
     >
       <li
+        v-for="article in articles"
         :key="article.id"
-        class="todo-listItem"
+        class="item"
       >
         <nuxt-link
           :key="article.slug"
           :to="`/posts/${article.slug}`"
         >
-          <h2> {{ article.title }}</h2>
-          <p class="date">
-            {{ formattedDate(article.dateISO) }}
-          </p>
-          <p class="description">
-            {{ article.description }}
-          </p>
+          <h1> {{ article.title }}</h1>
         </nuxt-link>
+        <p class="description">
+          {{ article.description }}
+        </p>
+        <time class="date">
+          {{ formattedDate(article.dateISO) }}
+        </time>
       </li>
     </ul>
   </section>
@@ -48,7 +46,34 @@
 
 <style lang="scss" scoped>
   .posts {
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 3em 1em;
+
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.3em;
+    }
+
+    time {
+      font-size: .8em;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    .list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .item {
+      padding: 1em;
+    }
+
+    .description {
+    margin: .5em 0;
+    }
   }
 </style>
