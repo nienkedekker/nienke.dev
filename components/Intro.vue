@@ -1,5 +1,6 @@
 <template>
   <section class="intro">
+    🚧 I'M REDOING THIS SITE, if you run into issues do not let me know 😗️💕😃
     <h1 class="introHeader">
       My name is Nienke Dekker,
     </h1>

@@ -83,11 +83,11 @@ body, html {
 }
 
 .light {
-  --text-color: #343340;
+  --text-color: #64617b;
   --background: #fff;
   --section-title: #29233e;
   --header-line: #d1c7c1;
-  --link: #33272a;
+  --link: #000;
   --link-bg: #fff;
   --link-hover: #ff8ba7;
 }
