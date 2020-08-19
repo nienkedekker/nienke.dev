@@ -1,7 +1,7 @@
 <template>
   <section class="contact">
     <h1 class="sectionTitle">
-      > Get in touch
+       Get in touch
     </h1>
     <ul>
       <li class="listItem">

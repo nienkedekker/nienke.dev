@@ -1,9 +1,6 @@
 ---
-name: '2018-a-post-mortem'
 title: 2018, A Post Mortem
-date: 31 December 2018
 dateISO: 2018-12-31
-id: '2018-a-post-mortem'
 description: |
  It's been over a year since I wrote 2017: A Post Mortem, and a lot has happened!
 ---
@@ -51,22 +48,22 @@ I have some goals for 2019, and they're largely the same as last year's: write g
 ![](/images/portugal.jpeg)
 Portugal, September/October
 
-![](/images/fronteers.jpeg) 
+![](/images/fronteers.jpeg)
 Fronteers, October
 
-![](/images/romania.jpeg) 
+![](/images/romania.jpeg)
 Romania, April
 
 ![](/images/glasgow.jpeg)
 Glasgow, May
 
-![](/images/whw.jpeg) 
+![](/images/whw.jpeg)
 WHW, May
 
-![](/images/lochness.jpeg) 
+![](/images/lochness.jpeg)
 Loch Ness, May
 
-![](/images/whw2.jpeg) 
+![](/images/whw2.jpeg)
 WHW, May
 
 ![](/images/nienkemeem.jpeg)

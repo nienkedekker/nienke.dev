@@ -1,9 +1,6 @@
 ---
-name: 'getting-started-with-mongoose-discriminators-in-express-js'
 title: Getting started with Mongoose discriminators in Express.js
-date: 09 February 2018
 dateISO: 2018-02-09
-id: 'getting-started-with-mongoose-discriminators-in-express-js'
 description: |
   A starter's guide to extending Mongoose Schemas in Express.js.
 ---
@@ -13,18 +10,18 @@ I recently started rewriting my Rails side project, [what.pm](https://what.pm/),
 So for this rewrite, I wanted to dig a little deeper in storing data and stop relying on behind-the-scenes magic. This means coming up with a proper data model. I wanted a NoSQL database for flexibility (I might need to add different collection types later!). I opted for MongoDB because it meshes well with Node, and because I wanted to try MongooseJS (looking at the docs, it seemed to provide an easy to understand abstraction layer and spoiler alert: it is pretty neat).
 
 ## Disclaimer
-I'm writing this post as I'm learning, and my understanding of any concepts mentioned might be wrong. If you think that's the case, do let me know 😃 
+I'm writing this post as I'm learning, and my understanding of any concepts mentioned might be wrong. If you think that's the case, do let me know 😃
 
 ## The problem
-Imagine you're tracking which movies, books and tv shows you consume in a given year. These three things have a few things in common: they all have a title and a date of release. They also differ from each other, however: a Book has an _author_, whereas a Movie has a _director_. A TV show has neither of these things, but it does have a _season_. So, how would you set up your Mongoose schemas? You could easily create three different schemas for each (Book, Movie and TVshow). However, you'd be repeating yourself - in every schema, you'd have the same title field and date of release field. And if you wanted to add another field that all three schemas have in common - such as whether it's a rewatch/reread ('redo') - you'd have to add that new field to three different files. 
+Imagine you're tracking which movies, books and tv shows you consume in a given year. These three things have a few things in common: they all have a title and a date of release. They also differ from each other, however: a Book has an _author_, whereas a Movie has a _director_. A TV show has neither of these things, but it does have a _season_. So, how would you set up your Mongoose schemas? You could easily create three different schemas for each (Book, Movie and TVshow). However, you'd be repeating yourself - in every schema, you'd have the same title field and date of release field. And if you wanted to add another field that all three schemas have in common - such as whether it's a rewatch/reread ('redo') - you'd have to add that new field to three different files.
 
 What if you could extend some kind of "Base" schema, and have Movies, Books and TV Shows inherit from that one schema? I didn't know how, but luckily, a [colleague](https://peeke.nl/) suggested I look into Mongoose discriminators. Unfortunately, the documentation is a little sparse, and I couldn't find any Express.js specific tutorials/blog posts, so here's my attempt at fixing that. Hopefully, this post will help those looking to integrate Mongoose discriminators in their Express app :)
 
 ## The non-DRY way
 Just for clarity, this is what our schemas could look like without discriminators:
 
-```
-> models/book.js
+```js
+// models/book.js
 
 // Define our Book schema
 const BookSchema = new mongoose.Schema(
@@ -72,10 +69,10 @@ Nothing wrong with that! However, like I mentioned before, if we wanted to add a
 
 ```
 // signals whether I've already seen or read the item in question
-redo: { type: Boolean, required: false } 
+redo: { type: Boolean, required: false }
 ```
 
-We'd have to add it three times in three separate files 😖. So let's try something different. 
+We'd have to add it three times in three separate files 😖. So let's try something different.
 
 We're going to create one 'master' schema called _Base_, and we're going to make _Book_, _Movie_ and _Tvshow_ inherit from it. This is what we want to achieve in pseudocode:
 
@@ -84,7 +81,7 @@ Base:
 	title: { type: String, required: true },
 	date_released: { type: Date, required: true },
 	redo: { type: Boolean, required: false },
-    
+
 Book:
 	Inherit everything from Base, and add the following just for this schema:
 	author: { type: String, required: true }
@@ -171,7 +168,7 @@ Now if we create a new book for our collection, the new Book instance will show 
     "_id": {
         "$oid": "unique object ID"
     },
-    "itemtype": "Book", 
+    "itemtype": "Book",
     "author": "Book Author 1",
     "title": "Book Title 1",
     "date_added": {

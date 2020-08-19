@@ -1,14 +1,17 @@
 <template>
   <section class="other">
     <h1 class="sectionTitle">
-      > Other
+      Other
     </h1>
     <ul>
       <li class="listItem">
-        👩‍💻&nbsp;&nbsp;&nbsp;<a href="/humans.txt">humans.txt</a>
+        📠 <nuxt-link to="/posts">Horrifically outdated blog</nuxt-link>
       </li>
       <li class="listItem">
-        🚧&nbsp;&nbsp;&nbsp;<a href="https://what.pm">what.pm</a> <span class="label"> forever sideproject ✨</span>
+        📖 <nuxt-link to="/books">Book recs</nuxt-link>
+      </li>
+      <li class="listItem">
+        🚧  <a href="https://what.pm">What.pm</a> <span class="label"> forever sideproject ✨</span>
       </li>
     </ul>
   </section>

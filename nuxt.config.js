@@ -47,31 +47,24 @@ export default {
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
-		'@nuxtjs/eslint-module',
+    '@nuxt/content'
+		//'@nuxtjs/eslint-module',
 	],
 	/*
 	** Axios module configuration
 	** See https://axios.nuxtjs.org/options
 	*/
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  },
 	axios: {},
-	/*
-	** Build configuration
-	*/
-	build: {
-		/*
-		** You can extend webpack config here
-		*/
-		extend(config) {
-			config.module.rules.push({
-				test: /\.md$/,
-				loader: 'frontmatter-markdown-loader',
-				include: path.resolve(__dirname, 'blog'),
-			});
-		},
-	},
 	generate: {
 		routes: [
-			'/blog',
-		].concat(generatedPosts.map((w) => `/blog/${w}`)),
+			'/posts',
+		].concat(generatedPosts.map((w) => `/posts/${w}`)),
 	},
 };
