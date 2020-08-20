@@ -47,6 +47,8 @@ function getDocument(environment) {
 getDocument(global);
 ```
 
+Examples taken from this brilliant blogpost: https://tommikaikkonen.github.io/impure-to-pure/
+
 Using this approach, you'll find that testing your code becomes easier — you can set any value as its argument. The result can also be memoized, so it won't have to be recomputed in the future.
 
 This may seem like overkill and If your application deals with little state (and thus, low complexity), writing all your functions to be pure may not be worth it; it will most likely only work to restrict you.
