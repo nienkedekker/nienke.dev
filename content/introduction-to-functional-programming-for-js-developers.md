@@ -30,24 +30,26 @@ Right, I hear your thinking: how the *heck* will my program get anything done if
 A good thing to know is that side effects are not *verboten* in FP. It'd be hard to write a useful program without them. The point is to isolate side effects from the rest of your software. Instead of performing a side effect in a function, make that function return the information you need to perform the side effect *later*. Let's create an example. This is an impure function:
 
 ```js
-function getDocument() {
-    return global.window.document;
+let count = 1;
+
+function increaseCount() {
+ return count = count + 10;
 }
 
-getDocument()
+increaseCount() // 11
+console.log(count) // 11 <- count has been affected..
 ```
 
-The reason this function is impure is because it depends on a global value (`global`) inside the function. To make it pure, we can pass the global environment as an argument:
+The reason this function is impure is because it affects a variable `count` outside its own scope. Here's how we can make it pure:
 
 ```js
-function getDocument(environment) {
-    return environment.window.document;
-}
+let count = 1;
 
-getDocument(global);
+const increaseCount = (value) => value + 10;
+
+increaseCount(count); // 11
+console.log(count); // 1 <- count has not been affected!
 ```
-
-Examples taken from this brilliant blogpost: https://tommikaikkonen.github.io/impure-to-pure/
 
 Using this approach, you'll find that testing your code becomes easier — you can set any value as its argument. The result can also be memoized - meaning caching the result of a function call, so it won't have to be recomputed in the future. This can speed up your program.
 
@@ -97,7 +99,7 @@ Remember, the goal is not to write your program using pure functions only. The g
 
  Another concept that's worth diving into more is *shared state.* In JavaScript applications, chances are you're dealing with shared state. For example, a user is logged in, and based on their logged in status (`isLoggedIn`) you're showing different components. The state of these components depend on a shared global state. When this becomes problematic is when one component modifies the `isLoggedIn` state (it can do that, because isLoggedIn is global and mutable). This may prevent the other involved parties from working correctly. In short, one component can affect another in ways you can't always predict.
 
-A declarative framework like React helps you avoid these issues, but you can use functional programming methods to avoid issues from cropping up when modifying the global shared state. Instead of mutating the state directly from inside a component, you can create a Store, which contains methods for mutating state, and call those Store methods from inside your component. This is exactly what Redux does. By moving the responsibility of mutating state from a view component to a single source of truth (the store), your program becomes more predictable.
+A declarative framework like React helps you avoid these issues, but you can use functional programming methods to avoid issues from cropping up when modifying the global shared state. Instead of mutating the state directly from inside a component, you can create a Store, which contains methods for mutating state, and call those Store methods from inside your component. By moving the responsibility of mutating state from a view component to a single source of truth (the store), your program becomes more predictable. Note that a Store is _still_ an instance of shared state that can be mutated by more than one party, but you've at least managed to somewhat isolate state logic.
 
 ## Other concepts
 
