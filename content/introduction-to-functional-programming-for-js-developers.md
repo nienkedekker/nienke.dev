@@ -51,9 +51,7 @@ increaseCount(count); // 11
 console.log(count); // 1 <- count has not been affected!
 ```
 
-Using this approach, you'll find that testing your code becomes easier — you can set any value as its argument. The result can also be memoized - meaning caching the result of a function call, so it won't have to be recomputed in the future. This can speed up your program.
-
-This may seem like overkill and If your application deals with little state (and thus, low complexity), writing all your functions to be pure may not be worth it; it will most likely only work to restrict you.
+Yes, this is a contrived example - I'm finding it remarkably difficult to write examples you might actually encounter in applications, but I'm hoping you get the gist. This may seem like overkill and If your application deals with little state (and thus, low complexity), writing all your functions to be pure may not be worth it; it will most likely only work to restrict you.
 
 ## Immutability
 
