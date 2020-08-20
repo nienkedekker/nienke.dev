@@ -133,5 +133,5 @@ For further reading I can recommend the following links:
 - [https://2ality.com/2019/10/shared-mutable-state.html#what-is-shared-mutable-state-and-why-is-it-problematic%3F](https://2ality.com/2019/10/shared-mutable-state.html#what-is-shared-mutable-state-and-why-is-it-problematic%3F)
 - [https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
 - [https://medium.com/javascript-scene/the-dao-of-immutability-9f91a70c88cd](https://medium.com/javascript-scene/the-dao-of-immutability-9f91a70c88cd)
-- [https://outline.com/EM8RZr](https://outline.com/EM8RZr)
 - [https://dev.to/joelnet/functional-javascript---functors-monads-and-promises-1pol](https://dev.to/joelnet/functional-javascript---functors-monads-and-promises-1pol)
+- [https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f/](https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f/)
