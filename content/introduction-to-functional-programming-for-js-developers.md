@@ -9,7 +9,7 @@ If you're like me and started your journey in web development with PHP scripts c
 
 This breaks down when people start talking about functional programming. I don't truly understand how it applies to the real world. It has *currying* and *thunks* and *monads* and *lambdas* and for some reason, everything is immutable. When reading about functional programming I feel like I need a PhD in something like Mathematics or Theoretical Physics. I wouldn't call myself dumb, but I've never been great at math or formal logic, you know, stuff like this:
 
-_MISSING IMAGE THAT I'LL UPLOAD LATER LOL_
+![](/images/bro-wtf.png)
 
 My mind simply refuses. Which is fine since 95% of my day job consists of tying API endpoints up together and arguing about component naming, but there's just so much buzz about functional programming, specifically within the JavaScript community (to be even more specific: within the React ecosystem), that I can't help but wonder what I'm missing out on. I like to learn by working through a concept and either writing or talking about it, so that's what we're going to do here!
 
