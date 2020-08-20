@@ -2,7 +2,7 @@
 title: Introduction to Functional Programming for JavaScript developers who aren't necessarily good at math or formal logic
 dateISO: 2020-08-18
 description: |
-  todo
+  A short introduction to functional programming for those without Computer Science PhDs
 ---
 
 If you're like me and started your journey in web development with PHP scripts cobbled together from [hotscripts.com](http://hotscripts.com), you'll most likely at one point have run into the object oriented programming paradigm  (OOP). What I like about OOP is that it maps easily to the real world - you have a `Car` class, which has `drive` and `brake` methods, and may have a relationship to another class such as a `Driver`, who can `buy` or `sell` a `Car` object. It gets harder to reason about when you leave real-world objects like animals and cars and start applying it to your actual program where you'll likely at some point end up with Objects like `NearestGasStationToUserThatTakesMastercard` but that's not a paradigm problem, it's an implementation issue. My point being, OOP is pretty intuitive, even for people (like me) who've never taken a computer science class.

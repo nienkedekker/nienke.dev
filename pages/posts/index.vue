@@ -1,5 +1,11 @@
 <template>
   <section class="posts">
+    <nav>
+      <nuxt-link to="/">
+        Home
+      </nuxt-link> >
+      Posts
+    </nav>
     <ul
       class="list"
     >
@@ -29,19 +35,19 @@
   export default {
     async asyncData({ $content }) {
       // Fetch all articles, sort them by date created from newest to oldest.
-      const articles = await $content().sortBy('dateISO', 'desc').fetch()
+      const articles = await $content().sortBy('dateISO', 'desc').fetch();
 
       return {
-        articles
-      }
+        articles,
+      };
     },
     methods: {
       formattedDate(date) {
         const newDate = new Date(date);
-        return newDate.toDateString()
-      }
-    }
-  }
+        return newDate.toDateString();
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -49,7 +55,6 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 3em 1em;
-
 
     h1 {
       font-weight: 600;
@@ -69,11 +74,11 @@
     }
 
     .item {
-      padding: 1em;
+      padding: 1em 0;
     }
 
     .description {
-    margin: .5em 0;
+      margin: .5em 0;
     }
   }
 </style>

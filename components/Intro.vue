@@ -1,6 +1,6 @@
 <template>
   <section class="intro">
-    🚧 I'M REDOING THIS SITE, if you run into issues do not let me know 😗️💕😃
+    🚧 I'M REDOING THIS SITE, if you run into issues please do not let me know 😗️💕😃
     <h1 class="introHeader">
       My name is Nienke Dekker,
     </h1>
@@ -12,7 +12,7 @@
       <a href="https://nos.nl">NOS</a>, focusing on creating clean and performant code.
     </p>
     <p class="introParagraphSmall">
-      Some technologies I've recently worked with are NextJS, Vue, and Node.
+      Some technologies I've recently worked with are NextJS, Vue, and Node. This site was built using <a href="https://nuxtjs.org/">NuxtJS</a>.
     </p>
   </section>
 </template>

@@ -1,5 +1,13 @@
 <template>
   <article>
+    <nav>
+      <nuxt-link to="/">
+        Home
+      </nuxt-link> >
+      <nuxt-link to="/posts">
+        Posts
+      </nuxt-link>
+    </nav>
     <h1>{{ article.title }}</h1>
     <time>{{ formattedDate(article.dateISO) }}</time>
     <nuxt-content :document="article" />
@@ -10,26 +18,30 @@
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const article = await $content(params.slug).fetch()
+      const article = await $content(params.slug).fetch();
 
-      return { article }
+      return { article };
     },
 
     methods: {
       formattedDate(date) {
         const newDate = new Date(date);
-        return newDate.toDateString()
-      }
-    }
-  }
+        return newDate.toDateString();
+      },
+    },
+  };
 </script>
 
 <style lang="scss">
 
+  nav {
+    margin-bottom: 1em;
+  }
+
   article {
     max-width: 50em;
     margin: 0 auto;
-    padding: 3em 0;
+    padding: 3em 1em;
 
     h1 {
       line-height: 1.4;

@@ -5,10 +5,14 @@
     </h1>
     <ul>
       <li class="listItem">
-        📠 <nuxt-link to="/posts">Horrifically outdated blog</nuxt-link>
+        📠 <nuxt-link to="/posts">
+          Horrifically outdated blog
+        </nuxt-link>
       </li>
       <li class="listItem">
-        📖 <nuxt-link to="/books">Book recs</nuxt-link>
+        📖 <nuxt-link to="/books">
+          Book recs
+        </nuxt-link>
       </li>
       <li class="listItem">
         🚧  <a href="https://what.pm">What.pm</a> <span class="label"> forever sideproject ✨</span>
