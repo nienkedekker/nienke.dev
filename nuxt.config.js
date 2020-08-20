@@ -5,10 +5,14 @@ const builtAt = new Date().toISOString();
 
 export default {
 	mode: 'universal',
+  target: 'static',
 	/*
 	** Headers of the page
 	*/
 	head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
 		title: 'Nienke Dekker',
 		meta: [
 			{ charset: 'utf-8' },

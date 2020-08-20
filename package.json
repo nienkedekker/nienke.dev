@@ -20,7 +20,7 @@
     "directory-tree": "^2.2.4",
     "frontmatter-markdown-loader": "^3.4.3",
     "node-sass": "^4.14.1",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.14.0",
     "prism-themes": "^1.4.0",
     "remove-markdown-extension": "^1.0.0",
     "sass-loader": "^8.0.2",
