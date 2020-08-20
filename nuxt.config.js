@@ -47,8 +47,8 @@ export default {
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
-    '@nuxt/content'
-		//'@nuxtjs/eslint-module',
+    '@nuxt/content',
+		'@nuxtjs/eslint-module',
 	],
 	/*
 	** Axios module configuration
@@ -57,7 +57,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
+        theme: 'prism-themes/themes/prism-dracula.css'
       }
     }
   },

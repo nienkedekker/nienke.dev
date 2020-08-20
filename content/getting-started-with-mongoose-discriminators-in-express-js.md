@@ -37,8 +37,8 @@ module.exports = mongoose.model('Book', BookSchema);
 ```
 
 
-```
-> models/movie.js
+```js
+// models/movie.js
 
 const MovieSchema = new mongoose.Schema(
   {
@@ -51,8 +51,8 @@ const MovieSchema = new mongoose.Schema(
 module.exports = mongoose.model('Movie', MovieSchema);
 ```
 
-```
-> models/tvshow.js
+```js
+// models/tvshow.js
 
 const Tvshow = new mongoose.Schema(
   {
@@ -67,7 +67,7 @@ module.exports = mongoose.model('Tvshow', TvshowSchema);
 
 Nothing wrong with that! However, like I mentioned before, if we wanted to add a new property, say:
 
-```
+```js
 // signals whether I've already seen or read the item in question
 redo: { type: Boolean, required: false }
 ```
@@ -76,7 +76,7 @@ We'd have to add it three times in three separate files 😖. So let's try somet
 
 We're going to create one 'master' schema called _Base_, and we're going to make _Book_, _Movie_ and _Tvshow_ inherit from it. This is what we want to achieve in pseudocode:
 
-```
+```js
 Base:
 	title: { type: String, required: true },
 	date_released: { type: Date, required: true },
@@ -98,7 +98,8 @@ TV Show:
 So how are we going to give our child schemas (Book, Movie, Tvshow) the _Base_ options? In other words, how will we extend our _Base_? Enter [discriminators](http://mongoosejs.com/docs/discriminators.html). A discriminator is a function for model that "returns a model whose schema is the union of the base schema and the discriminator schema." So basically, a discriminator will allow us to specify a key, like _kind_ or _itemtype_. With this key, we can store different entities (books, movies, tv shows..) in one collection, and we'll still be able to discriminate (badum tsss) between these entities.
 
 So let's set up our Base schema. Again, that's the structure that our other schemas will extend from.
-```
+
+```js
 const baseOptions = {
   discriminatorKey: 'itemtype', // our discriminator key, could be anything
   collection: 'items', // the name of our collection
@@ -118,8 +119,8 @@ module.exports = mongoose.model('Base');
 
 And then we could edit _book.js_ like this:
 
-```
-> models/book.js
+```js
+// models/book.js
 
 const Base = require('./base'); // we have to make sure our Book schema is aware of the Base schema
 
@@ -133,8 +134,8 @@ module.exports = mongoose.model('Book');
 
 With _Base.discriminator()_, we're telling Mongoose that we want to get the properties of _Base_, and add another _author_ property, solely for our Book schema. Let's do the same thing with _models/movie.js_:
 
-```
-> models/movie.js
+```js
+// models/movie.js
 
 const Base = require('./base');
 
@@ -148,8 +149,8 @@ module.exports = mongoose.model('Movie');
 
 and _tvshow.js_:
 
-```
-> models/tvshow.js
+```js
+// models/tvshow.js
 
 const Base = require('./base');
 
@@ -163,7 +164,7 @@ module.exports = mongoose.model('Tvshow');
 
 Now if we create a new book for our collection, the new Book instance will show up in our MongoDB collection like this:
 
-```
+```js
 {
     "_id": {
         "$oid": "unique object ID"
@@ -180,8 +181,8 @@ Now if we create a new book for our collection, the new Book instance will show 
 
 Cool, right? Now let's fetch some data. The example below will return the amount of books in our collection, and all tv shows with their titles and seasons:
 
-```
-> controllers/someController.js
+```js
+// controllers/someController.js
 
 const Book = require('../models/book');
 const Tvshow = require('../models/tvshow');
