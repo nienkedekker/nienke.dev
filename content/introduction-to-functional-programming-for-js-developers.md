@@ -61,7 +61,7 @@ Another, more true to real life example is this:
 const addToShoppingBasket = (basket, item, amount) => {
 	basket.items.push({
 		item,
-		quantity
+		amount
 	});
 
 	return basket
@@ -82,7 +82,7 @@ const addToShoppingBasket = (basket, item, amount) => {
 
 	clonedBasket.items.push({
 		item,
-		quantity
+		amount
 	});
 
 	return clonedBasket
