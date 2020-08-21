@@ -21,7 +21,7 @@ So let's break down a couple of those core FP concepts that seem to pop up every
 
 - Pure functions are functions that, given the same input, always return the same output, and have no side-effects. They can be used as simple, re-usable building blocks.
 - A side effect is a change in your application's state that can be observed *outside of the function that calls that change*. A function that writes data to your file system is an impure function, because you can see its results somewhere other than inside the function.
-- Immutability is a *thing* that cannot be modified after it's created. An immutable object is an object that you can't add new properties on after its creation.
+- Immutability means you cannot modify something after it's created -- like shared state. For example, an immutable object is an object that you can't add new properties on after its creation.
 
 Right, I hear your thinking: how the *heck* will my program get anything done if I can't do any of those things? How does one write a working application where, let's say, a user is allowed to upload images and overwrite those images with newer ones if I'm not allowed to mutate objects? Or use side effects?
 
