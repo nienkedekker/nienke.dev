@@ -1,48 +1,101 @@
 <template>
   <section class="intro">
-    🚧 I'M REDOING THIS SITE, if you run into issues please do not let me know 😗️💕😃
-    <h1 class="introHeader">
-      My name is Nienke Dekker,
-    </h1>
-    <p class="introParagraph">
-      and I'm a frontend developer from Amsterdam.
-    </p>
-    <p class="introParagraph">
-      I work at the
-      <a href="https://nos.nl">NOS</a>, focusing on creating clean and performant code.
-    </p>
-    <p class="introParagraphSmall">
-      Some technologies I've recently worked with are NextJS, Vue, and Node. This site was built using <a href="https://nuxtjs.org/">NuxtJS</a>.
-    </p>
+    <div class="wrapper">
+      <div>
+        <picture>
+          <source
+            media="(max-width: 759px)"
+            srcset="../static/moi-landscape.jpg"
+          />
+          <source media="(min-width: 760px)" srcset="../static/moi.jpeg" />
+          <img
+            src="../static/moi.jpeg"
+            alt="Chris standing up holding his daughter Elva"
+            class="image"
+          />
+        </picture>
+      </div>
+      <div class="text">
+        <h1>
+          Hi, I'm Nienke.
+        </h1>
+        <p>
+          I'm a software developer from Amsterdam. I work at
+          <a href="https://confrere.com">Confrere</a>, focusing on WebRTC,
+          accessibility, and anything else that strikes my fancy.
+        </p>
+        <p>
+          You can find me on
+          <a href="https://twitter.com/helenasometimes">Twitter</a> or
+          <a href="https://github.com/nienkedekker">GitHub</a>.
+        </p>
+        <p>
+          My forever sideproject is <a href="https://what.pm">what.pm</a>. I
+          very sporadically write <NuxtLink to="/posts">blog posts</NuxtLink>.
+        </p>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Intro',
+  name: "Intro"
 };
 </script>
 
 <style lang="scss" scoped>
 .intro {
-  grid-area: intro;
-	font-family: 'Inter', sans-serif;
+  display: flex;
+
+  @media (min-width: 760px) {
+    flex-direction: column;
+  }
 }
 
-.introHeader {
-	font-size: 3em;
-	font-weight: 400;
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media (min-width: 760px) {
+    flex-direction: row;
+  }
 }
 
-.introParagraph {
-  font-size: 1.5em;
-	opacity: 0.8;
+.text {
+  @media (min-width: 760px) {
+    margin-left: 2em;
+  }
 }
 
-.introParagraphSmall {
-	font-size: 1em;
-	line-height: 2;
-	padding: 1em 0;
-	max-width: 800px;
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+
+  @media (min-width: 760px) {
+    font-size: 3em;
+  }
+}
+
+.image {
+  border-radius: 10px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  @media (min-width: 760px) {
+    max-width: 220px;
+    margin-bottom: 0;
+  }
 }
 </style>
