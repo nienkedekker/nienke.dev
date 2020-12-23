@@ -7,10 +7,10 @@
             media="(max-width: 759px)"
             srcset="../static/moi-landscape.jpg"
           />
-          <source media="(min-width: 760px)" srcset="../static/moi.jpeg" />
+          <source media="(min-width: 760px)" srcset="../static/moi.jpg" />
           <img
-            src="../static/moi.jpeg"
-            alt="Chris standing up holding his daughter Elva"
+            src="../static/moi.jpg"
+            alt="Nienke sitting in a restaurant"
             class="image"
           />
         </picture>
