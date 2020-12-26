@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/axios": "^5.12.4",
+    "dayjs": "^1.9.7",
     "directory-tree": "^2.2.5",
     "frontmatter-markdown-loader": "^3.6.2",
     "node-sass": "^5.0.0",

@@ -1,17 +1,14 @@
 <template>
   <section class="posts">
-    <nav>
-      <NuxtLink to="/">Home</NuxtLink>
-      > Posts
-    </nav>
+    <p>
+      I sometimes write blog posts, mostly as a reference for myself. Caveat
+      lector: these posts are usually not updated after writing.
+    </p>
     <ul class="list">
       <li v-for="article in articles" :key="article.id" class="item">
         <nuxt-link :key="article.slug" :to="`/posts/${article.slug}`">
           <h1>{{ article.title }}</h1>
         </nuxt-link>
-        <p class="description">
-          {{ article.description }}
-        </p>
         <time class="date">
           {{ formattedDate(article.dateISO) }}
         </time>
@@ -21,6 +18,8 @@
 </template>
 
 <script>
+import dayjs from "dayjs";
+
 export default {
   async asyncData({ $content }) {
     // Fetch all articles, sort them by date created from newest to oldest.
@@ -34,8 +33,7 @@ export default {
   },
   methods: {
     formattedDate(date) {
-      const newDate = new Date(date);
-      return newDate.toDateString();
+      return dayjs(date).format("MMMM DD, YYYY");
     }
   }
 };
@@ -43,33 +41,42 @@ export default {
 
 <style lang="scss" scoped>
 .posts {
-  max-width: 800px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 3em 1em;
+  padding: 1em;
+  margin: 0 auto;
+
+  @media (min-width: 760px) {
+    padding: 5em 1em;
+  }
+
+  p {
+    padding: 1em;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+  }
 
   h1 {
-    font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1em;
+    line-height: 1.5;
   }
+}
 
-  time {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    text-decoration: underline;
-  }
+.item {
+  padding: 1em;
+}
 
-  .list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .item {
-    padding: 1em 0;
-  }
-
-  .description {
-    margin: 0.5em 0;
-  }
+.date {
+  font-size: 0.8em;
 }
 </style>

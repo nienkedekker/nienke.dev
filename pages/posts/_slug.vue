@@ -1,70 +1,79 @@
 <template>
   <article>
-    <nav>
-      <nuxt-link to="/">
-        Home
-      </nuxt-link> >
-      <nuxt-link to="/posts">
-        Posts
-      </nuxt-link>
-    </nav>
     <h1>{{ article.title }}</h1>
-    <time>{{ formattedDate(article.dateISO) }}</time>
+    <time class="date">{{ formattedDate(article.dateISO) }}</time>
     <nuxt-content :document="article" />
   </article>
 </template>
 
 <script>
-  export default {
-    async asyncData({ $content, params }) {
-      const article = await $content(params.slug).fetch();
+import dayjs from "dayjs";
 
-      return { article };
-    },
+export default {
+  async asyncData({ $content, params }) {
+    const article = await $content(params.slug).fetch();
 
-    methods: {
-      formattedDate(date) {
-        const newDate = new Date(date);
-        return newDate.toDateString();
-      },
-    },
-  };
+    return { article };
+  },
+
+  methods: {
+    formattedDate(date) {
+      return dayjs(date).format("MMMM DD, YYYY");
+    }
+  }
+};
 </script>
 
 <style lang="scss">
+article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1em;
+  margin: 0 auto;
 
-  nav {
-    margin-bottom: 1em;
+  @media (min-width: 760px) {
+    padding: 5em 1em;
   }
 
-  article {
-    max-width: 50em;
-    margin: 0 auto;
-    padding: 3em 1em;
-
-    h1 {
-      line-height: 1.4;
-      font-weight: 600;
-    }
-
-    time {
-      text-transform: uppercase;
-    }
-
-    p, ul, ol {
-      line-height: 1.85;
-      margin: 1.5em 0;
-    }
-
-    code {
-      font-size: 1em;
-    }
+  h1 {
+    font-size: 1.4em;
+    line-height: 1.5;
   }
 
-  img {
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  h2 {
+    font-size: 1.2em;
+    margin-top: 2em;
   }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .date {
+    font-size: 0.8em;
+  }
+
+  p,
+  ul,
+  ol {
+    margin: 1em 0 1em 0;
+    line-height: 1.6;
+  }
+
+  code {
+    font-size: 1em;
+  }
+
+  blockquote {
+    border-left: 5px solid grey;
+    padding-left: 1.5em;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

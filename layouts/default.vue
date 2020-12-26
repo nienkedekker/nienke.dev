@@ -3,9 +3,17 @@
     <no-ssr>
       <header>
         <Music />
-        <button class="switch" @click="switchTheme" :aria-label="getButtonText">
-          {{ getCorrectEmoji }}
-        </button>
+        <nav class="right-nav">
+          <NuxtLink to="/" class="item">Home</NuxtLink>
+          <NuxtLink to="/posts" class="item">Posts</NuxtLink>
+          <button
+            class="item switch"
+            @click="switchTheme"
+            :aria-label="getButtonText"
+          >
+            {{ getCorrectEmoji }}
+          </button>
+        </nav>
       </header>
     </no-ssr>
     <nuxt />
@@ -111,6 +119,18 @@ header {
   align-items: center;
 }
 
+.right-nav {
+  display: flex;
+
+  .item {
+    margin-left: 1em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 main {
   min-height: 100vh;
   background-color: var(--background);
@@ -124,9 +144,5 @@ main {
   cursor: pointer;
   white-space: nowrap;
   border-radius: 16px;
-
-  &:focus {
-    outline: 3px solid rgb(150, 150, 150);
-  }
 }
 </style>
