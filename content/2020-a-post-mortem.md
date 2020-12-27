@@ -3,7 +3,7 @@ title: 2020, A Post Mortem
 dateISO: 2020-12-27
 ---
 
-2020 is coming to a close, and I'd like to take some time to look back on this insane year. I didn't do one of these for 2019 unfortunately, but you can read my 2017 and 2018 post mortems [here](https://nienke.dev/posts).
+2020 is coming to a close, and I'd like to take some time to look back on this bizarre year. I didn't do one of these for 2019 unfortunately, but you can read my 2017 and 2018 post mortems [here](https://nienke.dev/posts).
 
 What can I possibly say about 2020 that hasn't been said before much more eloquently than I ever could? We've gone - are going through - a pandemic. Some of my close friends got sick for weeks on end, and whilst I've managed to dodge the virus until now, this year was a lonely one.
 
