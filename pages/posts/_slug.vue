@@ -53,11 +53,36 @@ article {
     font-size: 0.8em;
   }
 
-  p,
+  p {
+    margin: 1em 0 1em 0;
+  }
+
   ul,
   ol {
-    margin: 1em 0 1em 0;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: custom-counter;
+    padding-left: 3em;
+  }
+
+  ol li {
+    counter-increment: custom-counter;
+    position: relative;
+  }
+
+  ol li::before {
+    content: counter(custom-counter) ". ";
+    font-weight: 500;
+    position: absolute;
+    left: calc(-1 * 1.8em);
+  }
+
+  li {
+    padding: 0 0 0.3em 0;
   }
 
   code {
@@ -65,7 +90,7 @@ article {
   }
 
   blockquote {
-    border-left: 5px solid grey;
+    border-left: 2px solid rgb(199, 199, 199);
     padding-left: 1.5em;
   }
 }
