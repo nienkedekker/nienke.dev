@@ -4,8 +4,6 @@
       <header>
         <Music />
         <nav class="right-nav">
-          <NuxtLink to="/" class="item">Home</NuxtLink>
-          <NuxtLink to="/posts" class="item">Posts</NuxtLink>
           <button
             class="item switch"
             @click="switchTheme"
