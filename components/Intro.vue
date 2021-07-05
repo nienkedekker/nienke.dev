@@ -28,10 +28,7 @@
           You can find me on
           <a href="https://twitter.com/helenasometimes">Twitter</a> or
           <a href="https://github.com/nienkedekker">GitHub</a>.
-        </p>
-        <p>
-          My forever sideproject is <a href="https://what.pm">what.pm</a>. I
-          very sporadically write <NuxtLink to="/posts">blog posts</NuxtLink>.
+          My forever sideproject is <a href="https://what.pm">what.pm</a>.
         </p>
       </div>
     </div>
